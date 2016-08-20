@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5F30F616-F10D-B7D9-68C1-B3EB6FEF6672}</ProjectGuid>
+    <ProjectGuid>{DEA96FF4-2A99-FC92-11BD-14F3A5E35524}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -312,25 +312,25 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
  <Reference Include="DirectorEditor">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_VillansNotes_Ver2/Assets/Cinema Suite/Cinema Director/System/Editor/DirectorControl/DirectorEditor.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1/Assets/Cinema Suite/Cinema Director/System/Editor/DirectorControl/DirectorEditor.dll</HintPath>
  </Reference>
  <Reference Include="JMOAssets">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_VillansNotes_Ver2/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_VillansNotes_Ver2/Assets/Utage/Editor/NPOI/dotnet2/ICSharpCode.SharpZipLib.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1/Assets/Utage/Editor/NPOI/dotnet2/ICSharpCode.SharpZipLib.dll</HintPath>
  </Reference>
  <Reference Include="NPOI">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_VillansNotes_Ver2/Assets/Utage/Editor/NPOI/dotnet2/NPOI.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1/Assets/Utage/Editor/NPOI/dotnet2/NPOI.dll</HintPath>
  </Reference>
  <Reference Include="NPOI.OOXML">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_VillansNotes_Ver2/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OOXML.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OOXML.dll</HintPath>
  </Reference>
  <Reference Include="NPOI.OpenXml4Net">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_VillansNotes_Ver2/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OpenXml4Net.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OpenXml4Net.dll</HintPath>
  </Reference>
  <Reference Include="NPOI.OpenXmlFormats">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_VillansNotes_Ver2/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OpenXmlFormats.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OpenXmlFormats.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -359,11 +359,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{0F10998C-50C7-44C1-C156-971C671085AF}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{5EE874AD-64B5-2BFE-2276-A2652F49DBA9}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{0B9F0B09-1E0D-6628-6822-B94052B7DC4A}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{9D0F3D30-9DF9-B617-47EB-38B94153B8BA}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript.unityproj">
-      <Project>{8577E72F-BD38-E3F2-3745-DFC7048A2D72}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
+      <Project>{E35A4412-2A1D-96A7-BFD7-C37FDC15047F}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

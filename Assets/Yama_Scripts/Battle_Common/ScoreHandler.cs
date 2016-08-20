@@ -388,6 +388,9 @@ public class ScoreHandler : MonoBehaviour {
 														   		 transform.position.y + 65f,
 														   		 transform.position.z + -5f
 														  		);
+			//ロングタップ時のBrokenEffectを修正する為に調べた
+			//Debug.Log ("longUptouchObject.transform.position :" + longUptouchObject.transform.position );
+
 
 			// 通常より少し大きめ
 			longUptouchObject.transform.localScale = new Vector3(1f, 1f, 1f);
@@ -550,8 +553,7 @@ public class ScoreHandler : MonoBehaviour {
 			GameDate.GagePoint = 512;
 
 		}
-	}
-// *******************************************************************************************************************
+	} // *******************************************************************************************************************
 
 
 	// 自動で削除（miss時の処理）
@@ -590,10 +592,5 @@ public class ScoreHandler : MonoBehaviour {
 
 	// ロングタップアニメーションを止めるメソッド(EventTriggerでUp時に実行される)
 	public void LongTapAnimStop() { Destroy (longTapAnimObj); }
-
-	//// プレハブ名を検索して、それをDestroyすれば当然消える ////
-	//// 問題は二つ同時にアニメーションが発生して、片方を先にUpした場合、両方消えるはず ////
-	//// なので、『そのレーンタップを離したら、その同レーンのプレハブだけ消える』ようにしなければならない ////
-	//// マウスだとダブルタップ、およびデバックが難しいので、保留 ////
 
 }
