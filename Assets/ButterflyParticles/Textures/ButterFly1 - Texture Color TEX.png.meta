@@ -1,0 +1,277 @@
+fileFormatVersion: 2
+guid: ed14576d59c3c564f94db9b244312948
+timeCreated: 1457798464
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ButterFly1 - Texture Color TEX_0
+    21300002: ButterFly1 - Texture Color TEX_1
+    21300004: ButterFly1 - Texture Color TEX_2
+    21300006: ButterFly1 - Texture Color TEX_3
+    21300008: ButterFly1 - Texture Color TEX_4
+    21300010: ButterFly1 - Texture Color TEX_5
+    21300012: ButterFly1 - Texture Color TEX_6
+    21300014: ButterFly1 - Texture Color TEX_7
+    21300016: ButterFly1 - Texture Color TEX_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ButterFly1 - Texture Color TEX_0
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 755
+        width: 113
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56.5, y: 99.5}
+        - {x: -56.5, y: -94.5}
+        - {x: -54.5, y: -99.5}
+        - {x: 48.5, y: -99.5}
+        - {x: 56.5, y: -58.5}
+        - {x: 56.5, y: 99.5}
+    - name: ButterFly1 - Texture Color TEX_1
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 755
+        width: 174
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 49, y: 99}
+        - {x: 1, y: 69}
+        - {x: -53, y: 99}
+        - {x: -87, y: 99}
+        - {x: -87, y: -78}
+        - {x: -72, y: -97}
+        - {x: -64, y: -99}
+        - {x: 69, y: -99}
+        - {x: 87, y: -61}
+        - {x: 87, y: 99}
+    - name: ButterFly1 - Texture Color TEX_2
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 756
+        width: 233
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -70.5, y: 99.5}
+        - {x: -62.5, y: 87.5}
+        - {x: -59.5, y: 83.5}
+        - {x: -54.5, y: 79.5}
+        - {x: -52.5, y: 78.5}
+        - {x: -52.5, y: 79.5}
+        - {x: -53.5, y: 78.5}
+        - {x: -73.5, y: 98.5}
+        - {x: -77.5, y: 99.5}
+        - {x: -116.5, y: 99.5}
+        - {x: -116.5, y: 30.5}
+        - {x: -106.5, y: 2.5}
+        - {x: -113.5, y: -50.5}
+        - {x: -84.5, y: -99.5}
+        - {x: 79.5, y: -99.5}
+        - {x: 114.5, y: -80.5}
+        - {x: 116.5, y: -71.5}
+        - {x: 116.5, y: 99.5}
+    - name: ButterFly1 - Texture Color TEX_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 414
+        width: 292
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 123, y: -73.5}
+        - {x: 144, y: -30.5}
+        - {x: 146, y: -15.5}
+        - {x: 146, y: 99.5}
+        - {x: 70, y: 99.5}
+        - {x: 46, y: 93.5}
+        - {x: -7, y: 56.5}
+        - {x: -53, y: 94.5}
+        - {x: -58, y: 95.5}
+        - {x: -62, y: 87.5}
+        - {x: -102, y: 99.5}
+        - {x: -146, y: 99.5}
+        - {x: -146, y: -7.5}
+        - {x: -140, y: -79.5}
+        - {x: -92, y: -99.5}
+        - {x: 94, y: -99.5}
+    - name: ButterFly1 - Texture Color TEX_4
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 414
+        width: 306
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 153, y: -5}
+        - {x: 153, y: 99}
+        - {x: 96, y: 99}
+        - {x: 56, y: 74}
+        - {x: 58, y: 93}
+        - {x: 56, y: 95}
+        - {x: 42, y: 98}
+        - {x: -65, y: 95}
+        - {x: -94, y: 99}
+        - {x: -153, y: 99}
+        - {x: -153, y: -34}
+        - {x: -114, y: -99}
+        - {x: 103, y: -99}
+        - {x: 145, y: -56}
+    - name: ButterFly1 - Texture Color TEX_5
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 414
+        width: 233
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -70.5, y: 99.5}
+        - {x: -62.5, y: 87.5}
+        - {x: -59.5, y: 83.5}
+        - {x: -54.5, y: 79.5}
+        - {x: -52.5, y: 78.5}
+        - {x: -52.5, y: 79.5}
+        - {x: -53.5, y: 78.5}
+        - {x: -73.5, y: 98.5}
+        - {x: -77.5, y: 99.5}
+        - {x: -116.5, y: 99.5}
+        - {x: -116.5, y: 30.5}
+        - {x: -106.5, y: 2.5}
+        - {x: -113.5, y: -50.5}
+        - {x: -84.5, y: -99.5}
+        - {x: 79.5, y: -99.5}
+        - {x: 114.5, y: -80.5}
+        - {x: 116.5, y: -71.5}
+        - {x: 116.5, y: 99.5}
+    - name: ButterFly1 - Texture Color TEX_6
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 72
+        width: 174
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 49, y: 99}
+        - {x: 1, y: 69}
+        - {x: -53, y: 99}
+        - {x: -87, y: 99}
+        - {x: -87, y: -78}
+        - {x: -72, y: -97}
+        - {x: -64, y: -99}
+        - {x: 69, y: -99}
+        - {x: 87, y: -61}
+        - {x: 87, y: 99}
+    - name: ButterFly1 - Texture Color TEX_7
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 72
+        width: 113
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56.5, y: 99}
+        - {x: -56.5, y: -65}
+        - {x: -42.5, y: -99}
+        - {x: 44.5, y: -99}
+        - {x: 56.5, y: -63}
+        - {x: 56.5, y: 99}
+    - name: ButterFly1 - Texture Color TEX_8
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 72
+        width: 111
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -55.5, y: 99}
+        - {x: -55.5, y: 52}
+        - {x: -32.5, y: -99}
+        - {x: 31.5, y: -99}
+        - {x: 55.5, y: -7}
+        - {x: 55.5, y: 99}
+      - - {x: -42.5, y: -56}
+        - {x: -46.5, y: -56}
+        - {x: -48.5, y: -60}
+        - {x: -48.5, y: -65}
+        - {x: -46.5, y: -66}
+        - {x: -43.5, y: -66}
+        - {x: -40.5, y: -62}
+        - {x: -40.5, y: -57}
+    outline: []
+  spritePackingTag: MainAtlas
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

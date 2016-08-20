@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - 1
+  - 2
+  - 3
+  - 4
+  - SubCamera
+  - Left
+  - Top_Left
+  - Top
+  - Top_Right
+  - Right
+  - Image
+  - Pause
+  - UnPause
+  - Target
+  - Board
+  - Character
+  - Door
+  - Back Effects
+  - Front Effects
+  - Effects
+  - PlayerAttack
+  - EnemyAttack
+  - IgnoreMasterColor
+  - Equipment
+  - Item
+  - Support
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Enemy
+  - Filter
+  - Background
+  - Attack
+  - Character
+  - Door
+  - 'Back Effects '
+  - Front Effects
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: UI_Play
+    uniqueID: 816713485
+    locked: 0
+  - name: ButterFly
+    uniqueID: 1885426329
+    locked: 0
+  - name: Gage
+    uniqueID: 3430152941
+    locked: 0
+  - name: GageContainer
+    uniqueID: 950799171
+    locked: 0
+  - name: Water
+    uniqueID: 3532757825
+    locked: 0
+  - name: Background
+    uniqueID: 1459299893
+    locked: 0
+  - name: Attack
+    uniqueID: 3632973079
+    locked: 0
+  - name: Path
+    uniqueID: 3094358067
+    locked: 0
+  - name: Character
+    uniqueID: 3217574907
+    locked: 0
+  - name: Door
+    uniqueID: 1147421919
+    locked: 0
+  - name: Back Effect
+    uniqueID: 2460821959
+    locked: 0
+  - name: Front Effects
+    uniqueID: 3985865453
+    locked: 0

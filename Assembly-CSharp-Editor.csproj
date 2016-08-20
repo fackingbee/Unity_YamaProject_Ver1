@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{5F30F616-F10D-B7D9-68C1-B3EB6FEF6672}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_3;UNITY_5_3;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;ENABLE_RUNTIME_GI;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_NETWORK;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_TEXTUREID_MAP;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;PLATFORM_SUPPORTS_ADS_ID;SUPPORT_ENVIRONMENT_VARIABLES;PLATFORM_SUPPORTS_PROFILER;PLATFORM_HAS_NO_SUPPORT_FOR_BUCKET_ALLOCATOR;STRICTCPP_NEW_DELETE_SIGNATURES;WWW_USE_CURL;HAS_NEON_SKINNIG;UNITY_INPUT_SIMULATE_EVENTS;PLATFORM_ALWAYS_USES_STDOUT_FOR_LOG;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;UNITY_IOS;UNITY_IPHONE;UNITY_IPHONE_API;SUPPORT_MULTIPLE_DISPLAYS;ENABLE_IL2CPP;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_IOS_ON_DEMAND_RESOURCES;ENABLE_IOS_APP_SLICING;ENABLE_DUCK_TYPING</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Cinema Suite\About\Editor\CinemaSuiteWelcome.cs" />
+     <Compile Include="Assets\Cinema Suite\About\Editor\ProductInfo.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CinemaDirectorProductInfo.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackControls\ActorCurveTrackControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackControls\ActorItemTrackControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackControls\AudioTrackControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackControls\DialogueTrackControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackControls\GenericTrackControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackControls\GlobalItemTrackControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackControls\MultiActorCurveTrackControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackControls\ShotTrackControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackGroupControls\ActorTrackGroupControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackGroupControls\CharacterTrackGroupControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackGroupControls\GenericTrackGroupControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackGroupControls\MultiActorTrackGroupControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackItemControls\CinemaActionControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackItemControls\CinemaActorActionControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackItemControls\CinemaActorCurveControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackItemControls\CinemaAudioControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackItemControls\CinemaCurveControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackItemControls\CinemaGlobalActionControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackItemControls\CinemaItemControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackItemControls\CinemaMultiActorCurveControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Controls\TrackItemControls\CinemaShotControl.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\CutsceneInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\CutsceneItemInspectors\ActorClipCurveInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\CutsceneItemInspectors\DisableBehaviourInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\CutsceneItemInspectors\EnableBehaviourInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\CutsceneItemInspectors\LoadLevelEventInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\CutsceneItemInspectors\MemberClipCurveInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\CutsceneItemInspectors\MultiActorClipCurveInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\CutsceneItemInspectors\SendMessageGameObjectInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\CutsceneTriggerInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\GroupInspectors\ActorTrackGroupInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\GroupInspectors\CharacterTrackGroupInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\GroupInspectors\DirectorGroupInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\GroupInspectors\MultiActorTrackGroupInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\TrackInspectors\ActorItemTrackInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\TrackInspectors\AudioTrackInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\TrackInspectors\CurveTrackInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\TrackInspectors\DialogueTrackInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\TrackInspectors\GlobalItemTrackInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\TrackInspectors\MultiCurveTrackInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\TrackInspectors\ShotTrackInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CustomInspectors\TrackItemInspectors\CinemaAudioInspector.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\CutsceneCreatorWindow.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\DirectorSettingsWindow.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\DirectorWindow.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Utility\CutsceneControlHelper.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Utility\CutsceneItemFactory.cs" />
+     <Compile Include="Assets\Cinema Suite\Cinema Director\System\Editor\Utility\DirectorHelper.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\AntialiasingEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\BloomAndFlaresEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\BloomEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\CameraMotionBlurEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\ColorCorrectionCurvesEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\ColorCorrectionLookupEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\CreaseShadingEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\DepthOfFieldDeprecatedEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\DepthOfFieldEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\EdgeDetectionEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\NoiseAndGrainEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\SunShaftsEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\TonemappingEditor.cs" />
+     <Compile Include="Assets\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Editor\CFX_InspectorHelpEditor.cs" />
+     <Compile Include="Assets\JMO Assets\Cartoon FX\Editor\CFX_SpawnSystemEditor.cs" />
+     <Compile Include="Assets\MagicArsenal\KunaiEditor\Editor\KunaiEditor.cs" />
+     <Compile Include="Assets\MegaBook\Scripts\Editor\MBComplexPageEditor.cs" />
+     <Compile Include="Assets\MegaBook\Scripts\Editor\MegaBookBuilderEditor.cs" />
+     <Compile Include="Assets\MegaBook\Scripts\Editor\MegaBookDynamicMeshEditor.cs" />
+     <Compile Include="Assets\MegaBook\Scripts\Editor\MegaBookPageAttachEditor.cs" />
+     <Compile Include="Assets\MegaBook\Scripts\Editor\MegaBookUndo.cs" />
+     <Compile Include="Assets\TypefaceAnimator\Editor\TypefaceAnimatorEditor.cs" />
+     <Compile Include="Assets\TypefaceAnimator\Editor\TypefaceTools.cs" />
+     <Compile Include="Assets\Unitycoding\UI Widgets\Scripts\Editor\UIWidgetInspector.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\AdvEditor\AdvBuildChecker.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\AdvEditor\AdvEditorSettingWindow.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\AdvEditor\AdvFileManagerViewer.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\AdvEditor\AdvParamViewer.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\AdvEditor\AdvScenarioViewer.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\AdvEditor\AdvSceneChecker.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Attribute\EnumFlagsAttributeDrawer.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Checker\SceneChecker.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Converter\AdvExcelCsvConverter.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Converter\AdvFileListConverter.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Converter\AdvResourcesConverter.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\CustomCreateAsset.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\EdtiorToolKit.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\ExcelParser.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Inspector\AdvEngineStarterInspector.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Inspector\AssetFileManagerInspector.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Inspector\CameraManagerInspector.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Inspector\LetterBoxCameraInspector.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Inspector\Node2DInspector.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Inspector\Node2DSortDataInspector.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Inspector\Sprite2DInspector.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Inspector\TextArea2DInspector.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\AssetDataBaseEx\AssetDataBaseEx.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\AssetDataBaseEx\AssetInfo.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\AssetDataBaseEx\MainAssetInfo.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\AssetDataBaseEx\SubAssetInfo.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\Helper\MonoScriptHelper.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\Helper\SerializeHelper.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\PropertyDrawer\EnumFlagsDrawer.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\PropertyDrawer\HideDrawer.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\PropertyDrawer\LimitEnumDrawer.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\PropertyDrawer\NotEditableDrawer.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\PropertyDrawer\PathDialogDrawer.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\Util\PostProcessEditorSceneChanged.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\Window\CustomEditorWindow.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\Window\OptimizedScrollView.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Lib\Window\TestCustomEditorWindow.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\AboutUtage.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\CreateAdvEngineWindow.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\CreateManageresWindow.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\CreateNewProjectWindow.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\MeuTool.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\MeuToolCreate.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\MeuToolOpen.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\MeuToolOutputFile.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\ScenarioData\AdvExcelCsvConverter.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\ScenarioData\AdvExcelImporter.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\ScenarioData\AdvScenarioDataBuilderWindow.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\ScenarioData\AdvScenarioDataProject.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\ScriptCleanerWindow.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\SelectableColorChanger.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\Tool\AdvExcelLocalizeConverter.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\Tool\AdvExcelLocalizeMerger.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\Tool\ExportProjectPackage.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\Tool\FontChanger.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\Menu\Tool\ReferenceAssetChanger.cs" />
+     <Compile Include="Assets\Utage\Editor\Scripts\ResourceImporter\ResourceImporter.cs" />
+     <Compile Include="Assets\Yama_GUISystems\zYama_GUI_Resources\Editor\NestedAnimationCreator.cs" />
+     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
+     <None Include="Assets\Utage\LocalizeText\SystemText.txt" />
+     <None Include="Assets\MegaBook\ReadMe.txt" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
+     <None Include="Assets\ButterflyParticles\ButterflyParticles - Readme.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
+     <None Include="Assets\Cinema Suite\Cinema Director\Example Scenes\Shaders\Additive.shader" />
+     <None Include="Assets\Cinema Suite\Cinema Director\ReadMe.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceRaytrace.cginc" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
+     <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
+     <None Include="Assets\Yama_StartAction\Materals\CRTShader.shader" />
+     <None Include="Assets\JMO Assets\Cartoon FX\CartoonFX3 Readme.txt" />
+     <None Include="Assets\ResourceGlobes\RB_GlobeCutoutShader.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
+     <None Include="Assets\Cinema Suite\Cinema Director\link.xml" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\RadialBlur.shader" />
+     <None Include="Assets\MagicArsenal\MagicArsenal - ReadMe.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
+     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Invert.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
+     <None Include="Assets\TypefaceAnimator\Demo\Fonts\BitmapFont.xml" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
+     <None Include="Assets\Utage\Editor\NPOI\Release Notes.txt" />
+     <None Include="Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
+     <None Include="Assets\Utage\LocalizeText\ExampleText.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
+     <None Include="Assets\JMO Assets\!JMO Assets Readme.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
+     <None Include="Assets\ResourceGlobes\RB_GlobeSpriteCutoutShader.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+     <None Include="Assets\Yama_GUISystems\Yamato GUI\Yamato 2.0\Sliced v2\Secondary Action Bars\choose.txt" />
+     <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
+     <None Include="Assets\Utage\ReadMe.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GrayscaleEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SepiaToneEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
+     <None Include="Assets\Unitycoding\UI Widgets\Changelog.txt" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
+     <None Include="Assets\Utage\Editor\NPOI\Read Me.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
+     <None Include="Assets\Utage\LocalizeText\ErrorMsg.txt" />
+     <None Include="Assets\Utage\LocalizeText\AdvErrorMsg.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
+     <None Include="Assets\MagicArsenal\KunaiEditor\Editor\Readme.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
+     <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
+     <None Include="Assets\Cinema Suite\Cinema Director\ChangeLog.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
+     <None Include="Assets\Utage\Sample\ReadMe.txt" />
+     <None Include="Assets\ResourceGlobes\RB_GlobeShader.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+ <Reference Include="UnityEditor.Advertisements">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.EditorTestsRunner">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TreeEditor">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="DirectorEditor">
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_VillansNotes_Ver2/Assets/Cinema Suite/Cinema Director/System/Editor/DirectorControl/DirectorEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="JMOAssets">
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_VillansNotes_Ver2/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.SharpZipLib">
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_VillansNotes_Ver2/Assets/Utage/Editor/NPOI/dotnet2/ICSharpCode.SharpZipLib.dll</HintPath>
+ </Reference>
+ <Reference Include="NPOI">
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_VillansNotes_Ver2/Assets/Utage/Editor/NPOI/dotnet2/NPOI.dll</HintPath>
+ </Reference>
+ <Reference Include="NPOI.OOXML">
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_VillansNotes_Ver2/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OOXML.dll</HintPath>
+ </Reference>
+ <Reference Include="NPOI.OpenXml4Net">
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_VillansNotes_Ver2/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OpenXml4Net.dll</HintPath>
+ </Reference>
+ <Reference Include="NPOI.OpenXmlFormats">
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_VillansNotes_Ver2/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OpenXmlFormats.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>/Applications/Unity/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions">
+ <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WebGL.Extensions">
+ <HintPath>/Applications/Unity/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>/Applications/Unity/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.OSXStandalone.Extensions">
+ <HintPath>/Applications/Unity/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{0F10998C-50C7-44C1-C156-971C671085AF}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{0B9F0B09-1E0D-6628-6822-B94052B7DC4A}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript.unityproj">
+      <Project>{8577E72F-BD38-E3F2-3745-DFC7048A2D72}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
