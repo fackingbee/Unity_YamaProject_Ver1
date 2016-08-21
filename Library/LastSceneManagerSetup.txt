@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Yama_Scenes/Battle.unity
+- path: Assets/Yama_Scenes/GUISystem.unity
   isLoaded: 1
   isActive: 1

@@ -55,7 +55,7 @@ public class ScoreHandler : MonoBehaviour {
 	// プレイヤーゲージの増減のため、値をPowerProgressに値を渡す
 	private PowerProgress powerProgress;
 
-	public AudioManager audioManager;
+	public  AudioManager  audioManager;
 
 	// ロングタップエンドかスタートかを見る
 	public int tapType;
@@ -72,7 +72,6 @@ public class ScoreHandler : MonoBehaviour {
 			(60 * tick * 2) / (TimeManager.tempo * 9600f)
 		); 
 			
-
 		pointHandler  = FindObjectOfType<PointHandler> ();	 // PointHandlerのセット
 		gageHandler   = FindObjectOfType<GageHandler>  ();	 // GageHandlerのセット 
 		comboHandler  = FindObjectOfType<ComboHandler> ();	 // ComboHandlerのセット
@@ -101,9 +100,6 @@ public class ScoreHandler : MonoBehaviour {
 
 		// 後にTouchFailed（）メソッドなんかを作り、そっちにお引越すればいいかなぁと。
 
-		//Debug.Log("myRect : " + myRect.position.y);
-		//Debug.Log("touchBarRect1 : " + touchBarRect.position.y);
-
 		if (myRect.position.y <= touchBarRect.position.y && !isChecked && tapType != 3) {
 			
 			showText(0);
@@ -131,12 +127,7 @@ public class ScoreHandler : MonoBehaviour {
 			isChecked = true;
 
 		}
-
-		//Debug.Log("tapType : " + tapType);
-		//Debug.Log("TimeManager.tick : " + TimeManager.tick);
-		//Debug.Log("longTapEndTick + 9600 : " + (longTapEndTick + 9600));
-		//Debug.Log("longTapEndObj : " + longTapEndObj);
-		//Debug.Log("longTapEndTick : " + longTapEndTick);
+			
 		if (tapType == 3 && TimeManager.tick > (longTapEndTick + 9600)) {
 
 			if (longTapEndObj == null) {
@@ -146,16 +137,10 @@ public class ScoreHandler : MonoBehaviour {
 				endRect       = longTapEndObj.GetComponent<RectTransform>();
 
 			} else {
-				
-				//Debug.Log("endRect : " + endRect.position.y);
-				//Debug.Log("touchBarRect2 : " + touchBarRect.position.y);
-				//Debug.Log("isChecked : " + isChecked);
 
 				// !isCheckということは、このif内にまだ入っていないということ。一度入ったらもう入らない
 				//// こうする事で（isCheckedでフラグ管理する事で）、二度Missが表示されるといった事象を防ぐ
 				if (endRect.position.y <= touchBarRect.position.y && !isChecked) {
-					
-					//Debug.Log("ははは");
 
 					isChecked = true;
 					showText(0);
@@ -229,10 +214,8 @@ public class ScoreHandler : MonoBehaviour {
 
 		}
 			
-
 		// 取得した座標をもとに、タッチバーからの距離を点数化
 		distancePoint = GetDistancePoint (flickStartPos);
-
 
 		//  点数が0より大きければ、フリックの成功判定（フリック範囲、要微調整）
 		if(distancePoint > 0){
@@ -267,16 +250,9 @@ public class ScoreHandler : MonoBehaviour {
 			// フリック開始から、規定フレーム数以内に、規定移動量を満たした場合、フリック成功
 			// フリックした方向とflickFlagの向きが一致した場合、フリック成功
 			if (flickFlag == flickDirection && flickCount <= 3 && flickDistance > 50.0f) {
-
-				// TouchSuccessメソッドでDestroy
-				TouchSuccess (distancePoint);
-
-				// showTextメソッドにdistancePointを引数として渡す
-				showText(distancePoint);
-
-				//
+				TouchSuccess (distancePoint);	// TouchSuccessメソッドでDestroy
+				showText(distancePoint);		// showTextメソッドにdistancePointを引数として渡す
 				FlickAnim ();
-
 			}
 		}
 	}// *******************************************************************************************************************
@@ -323,9 +299,8 @@ public class ScoreHandler : MonoBehaviour {
 
 			// 生成されたアニメーションプレハブの座標を決める → タッチバーの位置に生成
 			longTapAnimObj.transform.position = touchBar.transform.position + new Vector3(0f, -7.0f, -7.0f);
-
 		}
-	}// *******************************************************************************************************************
+	} // *******************************************************************************************************************
 
 
 	GameObject FindLongTapEndObj() {
@@ -347,12 +322,11 @@ public class ScoreHandler : MonoBehaviour {
 				if (tmpIndex > maxIndex) {
 					maxIndex = tmpIndex;
 					findObj = obj;
-
 				}
 			}
 		}
 		return findObj;
-	}// *******************************************************************************************************************
+	} // *******************************************************************************************************************
 
 
 	// ロングタップ判定（End）
@@ -381,29 +355,28 @@ public class ScoreHandler : MonoBehaviour {
 			Destroy(longTapEndObj);
 
 			// ついでにButterflyBrokenエフェクトも発生させておく（変数名も一応変えておく）
+			// ここの生成はLongUpとペア
 			GameObject longUptouchObject = Instantiate(touchRingPrefab);
 
-			// エフェクトの位置の移動とサイズをリセット(なぜ別記するかというと、他のタイプと違って相対的に画面外下に生成されてしまうため座標を再設定する為。無駄な書き方かもしれないが)
+//			// エフェクトの位置の移動とサイズをリセット（初期値のままだと違う場所に出現してしまう）
+//			longUptouchObject.transform.position   = new Vector3(transform.position.x,
+//														   		 transform.position.y + 65f,
+//														   		 transform.position.z + -5f
+//														  		);
+
+			// 他のタップタイプと同じオフセットを設けてアップされた瞬間の場所（longTapEndObj.transform.position.y）に発生させる
 			longUptouchObject.transform.position   = new Vector3(transform.position.x,
-														   		 transform.position.y + 65f,
-														   		 transform.position.z + -5f
-														  		);
-			//ロングタップ時のBrokenEffectを修正する為に調べた
-			//Debug.Log ("longUptouchObject.transform.position :" + longUptouchObject.transform.position );
-
-
+																 longTapEndObj.transform.position.y + (-22.5f),
+																 transform.position.z + -5.0f
+																 );
 			// 通常より少し大きめ
 			longUptouchObject.transform.localScale = new Vector3(1f, 1f, 1f);
 
 			// アニメーションを開始
-			longUptouchObject.GetComponent<Animator>().Play( 0 );
-
-			//// LongDownプレハブのEventTriggerにStartもEndもつける ////
-			//// 理由はPointerUpはDown後にしか呼ばれないので、Upのプレハブは見た目とタイミングの為だけに存在 ////
+			longUptouchObject.GetComponent<Animator>().Play(0);
 
         }
-	}
-// *******************************************************************************************************************
+	} // *******************************************************************************************************************
 
 
 	// 評価用テキスト作成 
@@ -514,25 +487,31 @@ public class ScoreHandler : MonoBehaviour {
 		// 譜面の削除
 		Destroy (gameObject);
 
-		// エフェクトオブジェクトを生成 (touchuRingPrefab = Butterfly Broken)
-		GameObject touchObject = Instantiate(touchRingPrefab);
+		// ロングタップ時はダップダウンの位置にButterfly Brokenを発生させない（ロングタップ用は別途実装）
+		if( !isLongTap ){
 
-		// エフェクトの位置の移動とサイズをリセット
-		// ※BrokenEffectの大きさを微調整 / ButterFlyBorkenはタッチバーから出現する必要はない
-		touchObject.transform.position   = new Vector3(transform.position.x,
-													   transform.position.y + -22.5f,
-													   transform.position.z + -4.9f);
+			// エフェクトオブジェクトを生成 (touchuRingPrefab = Butterfly Broken)
+			GameObject touchObject = Instantiate(touchRingPrefab);
 
-//		//（修正）ScoreCreatorで生成されたxの位置を受け取って（touchBar）、タッチバーにプレハブを出現させる
-//		touchObject.transform.position   = new Vector3(touchBar.transform.position.x ,
-//													   touchBar.transform.position.y + -12f,
-//													   touchBar.transform.position.z + -19f);
+			// エフェクトの位置の移動とサイズをリセット
+			// ※BrokenEffectの大きさを微調整 / ButterFlyBorkenはタッチバーから出現する必要はない
+			touchObject.transform.position   = new Vector3(transform.position.x,
+														   transform.position.y + -22.5f,
+														   transform.position.z + -4.9f);
 
-		// BrokenEffectの大きさはtransform.positionとの兼ね合いもあって、破綻するかもしれないので、要検討!
-		touchObject.transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+//			//（修正）ScoreCreatorで生成されたxの位置を受け取って（touchBar）、タッチバーにプレハブを出現させる
+//			touchObject.transform.position   = new Vector3(touchBar.transform.position.x ,
+//														   touchBar.transform.position.y + -12f,
+//														   touchBar.transform.position.z + -19f);
 
-		// アニメーションを開始
-		touchObject.GetComponent<Animator>().Play( 0 );
+			// BrokenEffectの大きさはtransform.positionとの兼ね合いもあって、破綻するかもしれないので、要検討!
+			touchObject.transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+
+			// アニメーションを開始
+			touchObject.GetComponent<Animator>().Play( 0 );
+
+		}
+
 
 		// GameDataのscoreにポイントを設定 （pointの基準値が変わったのでその分を*4.4f乗算）
 		GameDate.score += (int)(point * 1000 * 4.4f);
@@ -545,7 +524,6 @@ public class ScoreHandler : MonoBehaviour {
 
 		// ゲージ表示(ゲージを更新)
 		gageHandler.setGage(GameDate.GagePoint);
-
 
 		// ゲージを制限
 		if (GameDate.GagePoint > 512) {
@@ -589,6 +567,7 @@ public class ScoreHandler : MonoBehaviour {
 
 	//タッチした瞬間レンズフレア発生
 	public void TouchEffect() { buttonAnim.SetTrigger ("Touch"); }
+
 
 	// ロングタップアニメーションを止めるメソッド(EventTriggerでUp時に実行される)
 	public void LongTapAnimStop() { Destroy (longTapAnimObj); }

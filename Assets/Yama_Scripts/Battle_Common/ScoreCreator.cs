@@ -1,4 +1,4 @@
-﻿ using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using MiniJSON; 					// これによりJSONに変換したMIDIを分析出来る
 using System.Collections.Generic;	// 型を指定出来るリスト・配列
