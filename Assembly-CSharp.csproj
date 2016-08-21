@@ -657,6 +657,9 @@
      <Compile Include="Assets\Yama_Scripts2\RogoToOpening.cs" />
      <Compile Include="Assets\Yama_Scripts2\StartToRogo.cs" />
      <Compile Include="Assets\Yama_Scripts2\ToGame.cs" />
+     <Compile Include="Assets\Yama_Scripts3\UImainMenu.cs" />
+     <Compile Include="Assets\Yama_Scripts3\mainMenuManage.cs" />
+     <Compile Include="Assets\Yama_Scripts3\variableManage.cs" />
      <Compile Include="Assets\Yama_StartAction\Scripts\CRT.cs" />
      <Compile Include="Assets\Yama_StartAction\Scripts\StaratActionEnemyInvoke.cs" />
      <Compile Include="Assets\Yama_StartAction\Scripts\StartActionDoorInvoke.cs" />
