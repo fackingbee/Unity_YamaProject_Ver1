@@ -105,15 +105,15 @@ public class ShopItemTableViewController : TableViewController<ShopItemData>{
 
 			if(tableData[index].price >= 1000){
 				// 価格が1000以上のアイテムを表示するセルの高さを返す
-				return 100.0f;
+				return 140.0f;
 			}
 
 			if(tableData[index].price >= 500){
 				// 価格が500以上のアイテムを表示するセルの高さを返す
-				return 100.0f;
+				return 140.0f;
 			}
 		}
-		return 100.0f;
+		return 140.0f;
 	}
 
 

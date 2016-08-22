@@ -63,10 +63,10 @@ public class NavigationViewController : ViewController {						// ViewController�
 
 		// 下記の移動開始に合わせるが、左移動なので符号注意
 		//lastViewPos.x = -this.CachedRectTransform.rect.width
-		lastViewPos.x = -this.CachedRectTransform.rect.width - 60.0f;
+		lastViewPos.x = -this.CachedRectTransform.rect.width - 250.0f;
 
 		lastView.CachedRectTransform.MoveTo(
-			lastViewPos, 0.3f, 0.0f, iTween.EaseType.easeOutSine, ()=>{
+			lastViewPos, 0.5f, 0.0f, iTween.EaseType.easeOutSine, ()=>{
 				// 移動が終わったらビューを非アクティブにする
 				lastView.gameObject.SetActive(false);
 			});
@@ -82,13 +82,13 @@ public class NavigationViewController : ViewController {						// ViewController�
 		//newView.CachedRectTransform.anchoredPosition = new Vector2(this.CachedRectTransform.rect.width, newViewPos.y);
 
 		// なので、オフセットを設けるが、上記の『lastViewPos.x』も数値を合わせる必要がある。（でないと、移動速度が合わずに途中で重なる）
-		newView.CachedRectTransform.anchoredPosition = new Vector2( this.CachedRectTransform.rect.width + 60.0f, newViewPos.y );
+		newView.CachedRectTransform.anchoredPosition = new Vector2( this.CachedRectTransform.rect.width + 250.0f, newViewPos.y );
 
 
 		newViewPos.x = 0.0f;
 
 		newView.CachedRectTransform.MoveTo(
-			newViewPos, 0.3f, 0.0f, iTween.EaseType.easeOutSine, ()=>{
+			newViewPos, 0.5f, 0.0f, iTween.EaseType.easeOutSine, ()=>{
 				// 移動が終わったらユーザーのインタラクションを有効にする
 				EnableInteraction(true);
 			});
@@ -122,10 +122,10 @@ public class NavigationViewController : ViewController {						// ViewController�
 
 		// 階層遷移のオフセット数値を上記（開始時）と合わせる（60.0fがないと移動速度が合わずに重なる&途中で消えて格好悪い）
 		//lastViewPos.x           = this.CachedRectTransform.rect.width;
-		lastViewPos.x           = this.CachedRectTransform.rect.width + 60.0f;
+		lastViewPos.x           = this.CachedRectTransform.rect.width + 250.0f;
 
 		lastView.CachedRectTransform.MoveTo(
-			lastViewPos, 0.3f, 0.0f, iTween.EaseType.easeOutSine, ()=>{
+			lastViewPos, 0.5f, 0.0f, iTween.EaseType.easeOutSine, ()=>{
 				// 移動が終わったらビューを非アクティブにする
 				lastView.gameObject.SetActive(false);
 			});
@@ -140,7 +140,7 @@ public class NavigationViewController : ViewController {						// ViewController�
 		poppedViewPos.x = 0.0f;
 
 		poppedView.CachedRectTransform.MoveTo(
-			poppedViewPos, 0.3f, 0.0f, iTween.EaseType.easeOutSine, ()=>{
+			poppedViewPos, 0.5f, 0.0f, iTween.EaseType.easeOutSine, ()=>{
 				// 移動が終わったらユーザーのインタラクションを有効にする
 				EnableInteraction(true);
 			});

@@ -12,6 +12,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Yama_Scenes/Opening.unity
   - enabled: 1
+    path: Assets/Yama_Scenes/KiiStart.unity
+  - enabled: 1
+    path: Assets/Yama_Scenes/OrganizeMenu.unity
+  - enabled: 1
     path: Assets/Yama_Scenes/TopMenu.unity
   - enabled: 1
     path: Assets/Yama_Scenes/Battle.unity
