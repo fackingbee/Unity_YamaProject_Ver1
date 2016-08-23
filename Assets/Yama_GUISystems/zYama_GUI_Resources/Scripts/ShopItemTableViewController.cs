@@ -35,7 +35,7 @@ public class ShopItemTableViewController : TableViewController<ShopItemData>{
 			navigationView.Push(this);
 		}
 	}
-		
+
 
 	// リスト項目のデータを読み込むメソッド
 	private void LoadData(){
@@ -133,42 +133,42 @@ public class ShopItemTableViewController : TableViewController<ShopItemData>{
 	[SerializeField] private ShopDetailViewController detailView;
 
 	// セルが選択されたときに呼ばれるメソッド
-		public void OnPressCell(ShopItemTableViewCell cell) {
-			if(navigationView != null) {
-				
-				// 選択されたセルからアイテムのデータを取得して、アイテム詳細画面の内容を更新する
-				detailView.UpdateContent(tableData[cell.DataIndex]);
-	
-				// アイテム詳細画面に遷移する
-				navigationView.Push(detailView);
+	public void OnPressCell(ShopItemTableViewCell cell) {
+		if(navigationView != null) {
+
+			// 選択されたセルからアイテムのデータを取得して、アイテム詳細画面の内容を更新する
+			detailView.UpdateContent(tableData[cell.DataIndex]);
+
+			// アイテム詳細画面に遷移する
+			navigationView.Push(detailView);
 
 			//Debug.Log ("cell.DataIndex: " + cell.DataIndex);
 
 
-			}
 		}
+	}
 	#endregion
 
-//	#region アイテム詳細画面に遷移させる処理の実装（直接決定画面に遷移する方式）
-//	// アイテム詳細画面のビューを保持
-//	[SerializeField] private ShopConfirmationViewController buyWindow;
-//
-//	// セルが選択されたときに呼ばれるメソッド
-//	public void OnPressCell(ShopItemTableViewCell cell) {
-//		if(navigationView != null) {
-//
-//			// 選択されたセルからアイテムのデータを取得して、アイテム詳細画面の内容を更新する
-//			buyWindow.UpdateContent(tableData[cell.DataIndex]);
-//
-//			// アイテム詳細画面に遷移する
-//			navigationView.Push(buyWindow);
-//
-//			//Debug.Log ("cell.DataIndex: " + cell.DataIndex);
-//
-//
-//		}
-//	}
-//	#endregion
+	//	#region アイテム詳細画面に遷移させる処理の実装（直接決定画面に遷移する方式）
+	//	// アイテム詳細画面のビューを保持
+	//	[SerializeField] private ShopConfirmationViewController buyWindow;
+	//
+	//	// セルが選択されたときに呼ばれるメソッド
+	//	public void OnPressCell(ShopItemTableViewCell cell) {
+	//		if(navigationView != null) {
+	//
+	//			// 選択されたセルからアイテムのデータを取得して、アイテム詳細画面の内容を更新する
+	//			buyWindow.UpdateContent(tableData[cell.DataIndex]);
+	//
+	//			// アイテム詳細画面に遷移する
+	//			navigationView.Push(buyWindow);
+	//
+	//			//Debug.Log ("cell.DataIndex: " + cell.DataIndex);
+	//
+	//
+	//		}
+	//	}
+	//	#endregion
 
 
 }

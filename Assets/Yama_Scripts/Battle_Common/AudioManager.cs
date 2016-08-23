@@ -58,7 +58,7 @@ public class AudioManager : MonoBehaviour {
 			return;
 
 		// GameControllerのGameStopでisPlayingがfalseになったら入る
-		}else{
+		} else {
 			
 			// ゲージが75％以上だった場合はクリア
 			if (GameDate.GagePoint >= 380) {
@@ -69,6 +69,7 @@ public class AudioManager : MonoBehaviour {
 				// GameClearアニメーションを表示
 				GameClear.SetActive (true);
 
+		 	// ゲームオーバー
 			} else {
 				
 				// 効果音を鳴らす（GameOver）
@@ -79,7 +80,8 @@ public class AudioManager : MonoBehaviour {
 
 			}
 
-			// 自身を停止してループを防ぐ / Updateに記載しているので、終了してもゲーム（フレーム）が進むごとに上記が実行されてしまう / Gameごとfalseにしてしまうと、UIが消えるので今回はスクリプトを非アクティブにする
+			// 自身を停止してループを防ぐ / Updateに記載しているので、終了してもゲーム（フレーム）が進むごとに上記が実行されてしまう 。
+			// Gameごとfalseにしてしまうと、UIが消えるので今回はスクリプトを非アクティブにする。
 			enabled = false;
 
 		}

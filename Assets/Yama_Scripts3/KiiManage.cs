@@ -16,23 +16,29 @@ public class KiiManage : MonoBehaviour {
 		
 		//作成されたユーザがあるか判断し、なければ新規作成
 		if(PlayerPrefs.HasKey("userID")){
+			
 			kiiUserName = PlayerPrefs.GetString("userID");	// 既存ユーザーのIDを使う
 			kiiPassWord = PlayerPrefs.GetString("userPW");	// 既存ユーザーのPassを使う
+
 		}else{
+			
 			kiiUserName = randomCodeGenerate(10);			// 新規ユーザーは先に名前と
 			kiiPassWord = randomCodeGenerate(6);			// パスを取得
-		}
 
-		// 
+		}
+			
 		bool registCheck = RegistUser(kiiUserName,kiiPassWord);
 
 		if(registCheck){
 			
 			//新規登録完了、Kiiへログイン
 			statusText.text = "Created new data";
+
 			bool loginCheck = loginUser(kiiUserName,kiiPassWord);
 
 			if(loginCheck){
+
+				//Debug.Log ("ログイン成功、Kiiに保存するデータを初期化");
 				
 				//ログイン成功、Kiiに保存するデータを初期化
 				bool initData = kiiDataInitialize();
@@ -42,11 +48,10 @@ public class KiiManage : MonoBehaviour {
 				}
 
 				if(!initData){
+
+					//Debug.Log ("保存失敗でシーンを再読み込み");
 					
 					//保存失敗でシーンを再読み込み
-					//Application.LoadLevel("start");
-					//Application.LoadLevel("KiiStart");
-
 					SceneManager.LoadScene ("KiiStart");
 
 					// このオブジェクトは消去
@@ -55,30 +60,30 @@ public class KiiManage : MonoBehaviour {
 
 				//初期化成功
 				if(initData){
+
+					//Debug.Log ("初期化成功");
 					
 					//ローカルにIDとPWを保存しメインメニューへ
 					PlayerPrefs.SetString("userID",kiiUserName);
 					PlayerPrefs.SetString("userPW",kiiPassWord);
 
-					//Application.LoadLevel("mainMenu");
-					//Application.LoadLevel("OrganaizeMenu");
-
-					SceneManager.LoadScene ("OrganaizeMenu");
+					SceneManager.LoadScene ("OrganizeMenu");
 
 				}
 
 			} else {
 				
 				//接続失敗で再読み込み
-				//Application.LoadLevel("start");
-
 				SceneManager.LoadScene ("KiiStart");
 
 				// このオブジェクトは消去
 				Destroy(this.gameObject);
+
 			}
 
 		} else {
+
+			//Debug.Log ("既に登録されており、Kiiへログイン");
 			
 			//すでに登録されているユーザはKiiへログイン
 			statusText.text = "Loading server data";
@@ -95,11 +100,10 @@ public class KiiManage : MonoBehaviour {
 				}
 
 				if(!loadDataCheck){
+
+					//Debug.Log ("読み込み失敗で再ロード");
 					
 					//読み込み失敗で再ロード
-					//Application.LoadLevel("start");
-					//Application.LoadLevel("KiiStart");
-
 					SceneManager.LoadScene ("KiiStart");
 
 					Destroy(this.gameObject);
@@ -107,20 +111,18 @@ public class KiiManage : MonoBehaviour {
 
 				if(loadDataCheck){
 					
-					//読み込み成功　シーン移動
-					//Application.LoadLevel("mainMenu");
-					//Application.LoadLevel("OrganaizeMenu");
+					//Debug.Log ("接続成功");
 
-					SceneManager.LoadScene ("OrganaizeMenu");
+					//読み込み成功　シーン移動
+					SceneManager.LoadScene ("OrganizeMenu");
 
 				}
 
 			} else {
+
+				//Debug.Log ("接続失敗");
 				
 				//接続失敗で再読み込み
-				//Application.LoadLevel("start");
-				//Application.LoadLevel("KiiStart");
-
 				SceneManager.LoadScene ("KiiStart");
 
 				// このオブジェクトは消去
@@ -133,6 +135,8 @@ public class KiiManage : MonoBehaviour {
 
 	//KiiCloudへログインする
 	public bool loginUser( string userName,string password ){
+
+		Debug.Log ("userName : " + userName);
 		
 		KiiUser user;
 
@@ -184,6 +188,7 @@ public class KiiManage : MonoBehaviour {
 
 	//KiiCloud上のデータ保存枠を初期化
 	bool kiiDataInitialize() {
+		
 		//ユーザーバケットを定義
 		KiiBucket userBucket   = KiiUser.CurrentUser.Bucket("myBasicData");
 		KiiObject basicDataObj = userBucket.NewKiiObject();
@@ -197,15 +202,17 @@ public class KiiManage : MonoBehaviour {
 
 		//オブジェクトを保存
 		try {
+			
 			basicDataObj.Save();
-		} catch(System.Exception e) {
+
+		} catch (System.Exception e) {
+			
 			Debug.LogError(e);
 			return false;
-		}
 
+		}
 		return true;
 	}
-
 
 
 
@@ -215,39 +222,46 @@ public class KiiManage : MonoBehaviour {
 
 	//保存されているデータを読み込み
 	bool loadKiiData(){
+		
 		KiiQuery allQuery = new KiiQuery();
+
 		try {
+			
 			//検索条件を指定
-			KiiQueryResult<KiiObject> result = 
-				KiiUser.CurrentUser.Bucket("myBasicData").Query(allQuery);
+			KiiQueryResult<KiiObject> result = KiiUser.CurrentUser.Bucket("myBasicData").Query(allQuery);
+
 			foreach(KiiObject obj in result){
+				
 				//データを読み込み
-				variableManage.currentLv     = (int)obj["lv"];
-				variableManage.currentExp    = (int)obj["exp"];
+				variableManage.currentLv     = (int )obj["lv"];
+				variableManage.currentExp    = (int )obj["exp"];
 				variableManage.openMachine02 = (bool)obj["open2"];
 				variableManage.openMachine03 = (bool)obj["open3"];
-				variableManage.myWP          = (int)obj["wp"];
+				variableManage.myWP          = (int )obj["wp"];
+
 			}
-		}catch (System.Exception e) {
+
+		} catch (System.Exception e) {
+			
 			Debug.Log(e);
 			return false;
-		}
 
+		}
 		return true;
 	}
 
 	//現在のデータを保存
 	public static bool saveKiiData(){
+		
 		KiiQuery allQuery = new KiiQuery();
+
 		try {
+			
 			//検索条件を指定
-			KiiQueryResult<KiiObject> result = 
-				KiiUser.CurrentUser.Bucket("myBasicData").Query(allQuery);
+			KiiQueryResult<KiiObject> result = KiiUser.CurrentUser.Bucket("myBasicData").Query(allQuery);
 
-			Debug.Log("kii : "+variableManage.currentLv);
-
-			foreach (KiiObject obj in result)
-			{
+			foreach (KiiObject obj in result){
+				
 				//データを保存
 				obj["lv"]    = variableManage.currentLv;
 				obj["exp"]   = variableManage.currentExp;
@@ -255,14 +269,17 @@ public class KiiManage : MonoBehaviour {
 				obj["open3"] = variableManage.openMachine03;
 				obj["wp"]    = variableManage.myWP;
 				obj.Save();
+
 			}
-		}
-		catch (System.Exception e){
+		} catch (System.Exception e) {
+			
 			Debug.Log(e);
 			return false;
+
 		}
 
 		return true;
+
 	}
 
 

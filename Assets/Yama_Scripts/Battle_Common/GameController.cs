@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement; 
 
 public class GameController : MonoBehaviour {
 
@@ -28,11 +29,9 @@ public class GameController : MonoBehaviour {
 	private Animator cameraRotate;
 
 
-	// iOSにBuild時のフレームレート問題の為 ***********************************************
 	void Awake(){
 		Application.targetFrameRate = 60;
 	}
-	// *******************************************************************************
 
 
 	void Start () {
@@ -86,6 +85,42 @@ public class GameController : MonoBehaviour {
 		}
 
 
+		// デバッグ用（強制的にゲーム終了）
+		if(Input.GetKeyDown("z")){
+
+			//Debug.Log ("強制終了モード");
+
+			// 強制的に経験値を100加算
+			variableManage.currentExp += 100;
+
+			// 強制的にゲームクリア
+			GameDate.GagePoint = 512;	
+
+			// 強制終了
+			GameStop ();
+
+			// データを保存するかどうか
+			bool svChk = KiiManage.saveKiiData ();
+
+			Debug.Log ("variableManage.currentExp : " + variableManage.currentExp);
+			Debug.Log ("variableManage.nextExp : " + variableManage.nextExp);
+
+			Debug.Log ("svChk : " + svChk);
+
+			// データを保存してシーン移動
+			if(!svChk){
+
+				Debug.Log ("データを保存します");
+
+				svChk = KiiManage.saveKiiData ();
+			}
+
+			Invoke ("DebugBattleEnd",1f);
+
+		}
+
+
+
 //		// TimeManager.timeが曲の長さを超えたら止める
 //		// +1.7fはGameOver等を遅らせて表示させる為
 //		if(isPlaying && TimeManager.time >= audioLength + 1.7f){
@@ -105,14 +140,29 @@ public class GameController : MonoBehaviour {
 		// Inspector上では、TimeManagerスクリプトをOFFにしておく
 		GetComponent<TimeManager> ().enabled = true;
 
-		//曲始まりのオフセット（スクリプトを分けて引数は変数化(Music_01_Manager.csで時間管理）
-		gameAudio.PlayDelayed (delayTime); // = gameAudio.PlayDelayed (1.7f);
+		// 曲始まりのオフセット（スクリプトを分けて引数は変数化(Music_01_Manager.csで時間管理）
+		// gameAudio.PlayDelayed (1.7f); と同義
+		gameAudio.PlayDelayed (delayTime); 
 
 	}
 
 
 	// 曲が終わったら、isPlayingをfalseにするメソッド
-	public void GameStop(){ isPlaying = false; }
+	public void GameStop(){ 
+		isPlaying = false; 
+	}
+
+
+
+	// デバッグ終了（KiiCloudの確認の為、経験値を与えて強制終了）
+	public void DebugBattleEnd(){
+
+		SceneManager.LoadScene("KiiStart");
+		Debug.Log ("KiiStartへ遷移しました");
+
+	}
+
+
 
 	// 一時停止メソッド
 	public void Pause(){
@@ -121,7 +171,7 @@ public class GameController : MonoBehaviour {
 		pauseObj.SetActive   (false);
 		unPauseObj.SetActive (true);
 
-		// 再生されているかどうか（されているの）
+		// 再生されているかどうか
 		isPausing = true;
 
 		// Update自体を一時停止
@@ -150,6 +200,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	// カメラを回転させるメソッド
-	public void CameraRotateOn(){ cameraRotate.enabled = true; }
-
+	public void CameraRotateOn(){
+		cameraRotate.enabled = true; 
+	}
 }

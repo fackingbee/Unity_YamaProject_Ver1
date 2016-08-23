@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 191374453}
   - 114: {fileID: 191374452}
+  - 114: {fileID: 191374454}
   m_Layer: 0
   m_Name: KiiInit
   m_TagString: Untagged
@@ -129,6 +130,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &191374454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 191374451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14c4acfc55c94a57baa996f26b68e24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statusText: {fileID: 1741154020}
 --- !u!1 &1303924540
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,3 +270,9 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fa417697f7c334ba17b2bd308d2447, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1741154020 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11461878, guid: 33fa417697f7c334ba17b2bd308d2447,
+    type: 2}
+  m_PrefabInternal: {fileID: 1527621458}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
