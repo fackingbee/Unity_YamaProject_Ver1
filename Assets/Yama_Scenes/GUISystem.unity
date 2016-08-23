@@ -38011,6 +38011,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
+  itemJasonData: {fileID: 4900000, guid: 4088750f7cd4a4e87a6707532978b8ff, type: 3}
   navigationView: {fileID: 41349396}
   detailView: {fileID: 1933863334}
 --- !u!1 &1258060966

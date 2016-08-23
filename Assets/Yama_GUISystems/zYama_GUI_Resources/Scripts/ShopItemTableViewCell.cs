@@ -8,13 +8,30 @@ using UnityEngine.UI;
 // オーバーライドするUpdateContentメソッドでShopItemDateクラスの引数を扱えるようにする
 #endregion
 
+
 // リスト項目のデータクラスを定義
 public class ShopItemData {
+	
 	public string  iconName;	// アイコン名
 	public string  name;		// アイテム名
 	public int     price;		// 価格
 	public string  description;	// 説明
+	public string  Type;        // ショップのタイプ（道具、武具、etc...）
+
+	// ShopItemDataのコンストラクタ化
+	// この時点でハードコードで直接『new List<ShopItemData>() 』をインスタンス化することは出来ない。
+	public ShopItemData ( string iconName, string name, int price, string description, string Type ){
+
+		this.iconName    = iconName;
+		this.name        = name;
+		this.price       = price;
+		this.description = description;
+		this.Type        = Type;
+
+	}
+
 }
+
 
 // TableViewCell<T>クラスを継承する
 public class ShopItemTableViewCell : TableViewCell<ShopItemData> {
