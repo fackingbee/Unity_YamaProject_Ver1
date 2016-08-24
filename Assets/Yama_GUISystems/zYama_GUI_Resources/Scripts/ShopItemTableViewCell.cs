@@ -30,6 +30,18 @@ public class ShopItemData {
 
 	}
 
+/// ちなみに引数の数を変えると、同じ名前のコンストラクタでも勝手に区別してくれるので
+//	public ShopItemData ( string iconName, string name, int price, string description, string Type, int number ){
+//
+//		this.iconName    = iconName;
+//		this.name        = name;
+//		this.price       = price;
+//		this.description = description;
+//		this.Type        = Type;
+//
+//	}
+///などとして、武具でShopItemDataを呼んでもよさそう
+
 }
 
 

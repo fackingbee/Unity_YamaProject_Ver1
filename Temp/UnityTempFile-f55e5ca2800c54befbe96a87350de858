@@ -1,0 +1,254 @@
+-debug
+-target:library
+-nowarn:0169
+-out:'Temp/Assembly-CSharp-Editor.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
+-r:'Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll'
+-r:'Library/ScriptAssemblies/Assembly-CSharp.dll'
+-r:'Library/ScriptAssemblies/Assembly-UnityScript.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll'
+-r:'Assets/Cinema Suite/Cinema Director/System/Editor/DirectorControl/DirectorEditor.dll'
+-r:'Assets/JMO Assets/Editor/JMOAssets.dll'
+-r:'Assets/Kii/Libs/JsonOrg.dll'
+-r:'Assets/Kii/Libs/KiiCloudStorageSDK.dll'
+-r:'Assets/Kii/Libs/KiiCloudUnitySDK.dll'
+-r:'Assets/Utage/Editor/NPOI/dotnet2/ICSharpCode.SharpZipLib.dll'
+-r:'Assets/Utage/Editor/NPOI/dotnet2/NPOI.dll'
+-r:'Assets/Utage/Editor/NPOI/dotnet2/NPOI.OOXML.dll'
+-r:'Assets/Utage/Editor/NPOI/dotnet2/NPOI.OpenXml4Net.dll'
+-r:'Assets/Utage/Editor/NPOI/dotnet2/NPOI.OpenXmlFormats.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll'
+-r:'/Applications/Unity/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll'
+-r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll'
+-r:'/Applications/Unity/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll'
+-r:'/Applications/Unity/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll'
+-r:'/Applications/Unity/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll'
+-r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll'
+-r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll'
+-define:UNITY_5_3_3
+-define:UNITY_5_3
+-define:UNITY_5
+-define:ENABLE_NEW_BUGREPORTER
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_FRAME_DEBUGGER
+-define:ENABLE_GENERICS
+-define:ENABLE_HOME_SCREEN
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_LIGHT_PROBES_LEGACY
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_PLUGIN_INSPECTOR
+-define:ENABLE_SHADOWS
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_SPRITE_POLYGON
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_UNET
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_VR
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:INCLUDE_IL2CPP
+-define:INCLUDE_DIRECTX12
+-define:PLATFORM_SUPPORTS_MONO
+-define:ENABLE_LOCALIZATION
+-define:ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION
+-define:ENABLE_EDITOR_TESTS_RUNNER
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GAMECENTER
+-define:ENABLE_NETWORK
+-define:ENABLE_LOG_MIXED_STACKTRACE
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_TEXTUREID_MAP
+-define:PLAYERCONNECTION_LISTENS_FIXED_PORT
+-define:DEBUGGER_LISTENS_FIXED_PORT
+-define:PLATFORM_SUPPORTS_ADS_ID
+-define:SUPPORT_ENVIRONMENT_VARIABLES
+-define:PLATFORM_SUPPORTS_PROFILER
+-define:PLATFORM_HAS_NO_SUPPORT_FOR_BUCKET_ALLOCATOR
+-define:STRICTCPP_NEW_DELETE_SIGNATURES
+-define:WWW_USE_CURL
+-define:HAS_NEON_SKINNIG
+-define:UNITY_INPUT_SIMULATE_EVENTS
+-define:PLATFORM_ALWAYS_USES_STDOUT_FOR_LOG
+-define:ENABLE_UNITYADS_RUNTIME
+-define:UNITY_UNITYADS_API
+-define:UNITY_IOS
+-define:UNITY_IPHONE
+-define:UNITY_IPHONE_API
+-define:SUPPORT_MULTIPLE_DISPLAYS
+-define:ENABLE_IL2CPP
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_OSX
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_IOS_ON_DEMAND_RESOURCES
+-define:ENABLE_IOS_APP_SLICING
+'Assets/Cinema Suite/About/Editor/CinemaSuiteWelcome.cs'
+'Assets/Cinema Suite/About/Editor/ProductInfo.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CinemaDirectorProductInfo.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/ActorCurveTrackControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/ActorItemTrackControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/AudioTrackControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/DialogueTrackControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/GenericTrackControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/GlobalItemTrackControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/MultiActorCurveTrackControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackControls/ShotTrackControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackGroupControls/ActorTrackGroupControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackGroupControls/CharacterTrackGroupControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackGroupControls/GenericTrackGroupControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackGroupControls/MultiActorTrackGroupControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaActionControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaActorActionControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaActorCurveControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaAudioControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaCurveControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaGlobalActionControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaItemControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaMultiActorCurveControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Controls/TrackItemControls/CinemaShotControl.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneItemInspectors/ActorClipCurveInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneItemInspectors/DisableBehaviourInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneItemInspectors/EnableBehaviourInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneItemInspectors/LoadLevelEventInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneItemInspectors/MemberClipCurveInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneItemInspectors/MultiActorClipCurveInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneItemInspectors/SendMessageGameObjectInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/CutsceneTriggerInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/GroupInspectors/ActorTrackGroupInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/GroupInspectors/CharacterTrackGroupInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/GroupInspectors/DirectorGroupInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/GroupInspectors/MultiActorTrackGroupInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackInspectors/ActorItemTrackInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackInspectors/AudioTrackInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackInspectors/CurveTrackInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackInspectors/DialogueTrackInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackInspectors/GlobalItemTrackInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackInspectors/MultiCurveTrackInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackInspectors/ShotTrackInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CustomInspectors/TrackItemInspectors/CinemaAudioInspector.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/CutsceneCreatorWindow.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/DirectorSettingsWindow.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/DirectorWindow.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Utility/CutsceneControlHelper.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Utility/CutsceneItemFactory.cs'
+'Assets/Cinema Suite/Cinema Director/System/Editor/Utility/DirectorHelper.cs'
+'Assets/Editor/ImageEffects/AntialiasingEditor.cs'
+'Assets/Editor/ImageEffects/BloomAndFlaresEditor.cs'
+'Assets/Editor/ImageEffects/BloomEditor.cs'
+'Assets/Editor/ImageEffects/CameraMotionBlurEditor.cs'
+'Assets/Editor/ImageEffects/ColorCorrectionCurvesEditor.cs'
+'Assets/Editor/ImageEffects/ColorCorrectionLookupEditor.cs'
+'Assets/Editor/ImageEffects/CreaseShadingEditor.cs'
+'Assets/Editor/ImageEffects/DepthOfFieldDeprecatedEditor.cs'
+'Assets/Editor/ImageEffects/DepthOfFieldEditor.cs'
+'Assets/Editor/ImageEffects/EdgeDetectionEditor.cs'
+'Assets/Editor/ImageEffects/NoiseAndGrainEditor.cs'
+'Assets/Editor/ImageEffects/SunShaftsEditor.cs'
+'Assets/Editor/ImageEffects/TonemappingEditor.cs'
+'Assets/Editor/ImageEffects/VignetteAndChromaticAberrationEditor.cs'
+'Assets/JMO Assets/Cartoon FX Easy Editor/Editor/CFXEasyEditor.cs'
+'Assets/JMO Assets/Cartoon FX/Editor/CFX_InspectorHelpEditor.cs'
+'Assets/JMO Assets/Cartoon FX/Editor/CFX_SpawnSystemEditor.cs'
+'Assets/MagicArsenal/KunaiEditor/Editor/KunaiEditor.cs'
+'Assets/MegaBook/Scripts/Editor/MBComplexPageEditor.cs'
+'Assets/MegaBook/Scripts/Editor/MegaBookBuilderEditor.cs'
+'Assets/MegaBook/Scripts/Editor/MegaBookDynamicMeshEditor.cs'
+'Assets/MegaBook/Scripts/Editor/MegaBookPageAttachEditor.cs'
+'Assets/MegaBook/Scripts/Editor/MegaBookUndo.cs'
+'Assets/TypefaceAnimator/Editor/TypefaceAnimatorEditor.cs'
+'Assets/TypefaceAnimator/Editor/TypefaceTools.cs'
+'Assets/Unitycoding/UI Widgets/Scripts/Editor/UIWidgetInspector.cs'
+'Assets/Utage/Editor/Scripts/AdvEditor/AdvBuildChecker.cs'
+'Assets/Utage/Editor/Scripts/AdvEditor/AdvEditorSettingWindow.cs'
+'Assets/Utage/Editor/Scripts/AdvEditor/AdvFileManagerViewer.cs'
+'Assets/Utage/Editor/Scripts/AdvEditor/AdvParamViewer.cs'
+'Assets/Utage/Editor/Scripts/AdvEditor/AdvScenarioViewer.cs'
+'Assets/Utage/Editor/Scripts/AdvEditor/AdvSceneChecker.cs'
+'Assets/Utage/Editor/Scripts/Attribute/EnumFlagsAttributeDrawer.cs'
+'Assets/Utage/Editor/Scripts/Checker/SceneChecker.cs'
+'Assets/Utage/Editor/Scripts/Converter/AdvExcelCsvConverter.cs'
+'Assets/Utage/Editor/Scripts/Converter/AdvFileListConverter.cs'
+'Assets/Utage/Editor/Scripts/Converter/AdvResourcesConverter.cs'
+'Assets/Utage/Editor/Scripts/CustomCreateAsset.cs'
+'Assets/Utage/Editor/Scripts/EdtiorToolKit.cs'
+'Assets/Utage/Editor/Scripts/ExcelParser.cs'
+'Assets/Utage/Editor/Scripts/Inspector/AdvEngineStarterInspector.cs'
+'Assets/Utage/Editor/Scripts/Inspector/AssetFileManagerInspector.cs'
+'Assets/Utage/Editor/Scripts/Inspector/CameraManagerInspector.cs'
+'Assets/Utage/Editor/Scripts/Inspector/LetterBoxCameraInspector.cs'
+'Assets/Utage/Editor/Scripts/Inspector/Node2DInspector.cs'
+'Assets/Utage/Editor/Scripts/Inspector/Node2DSortDataInspector.cs'
+'Assets/Utage/Editor/Scripts/Inspector/Sprite2DInspector.cs'
+'Assets/Utage/Editor/Scripts/Inspector/TextArea2DInspector.cs'
+'Assets/Utage/Editor/Scripts/Lib/AssetDataBaseEx/AssetDataBaseEx.cs'
+'Assets/Utage/Editor/Scripts/Lib/AssetDataBaseEx/AssetInfo.cs'
+'Assets/Utage/Editor/Scripts/Lib/AssetDataBaseEx/MainAssetInfo.cs'
+'Assets/Utage/Editor/Scripts/Lib/AssetDataBaseEx/SubAssetInfo.cs'
+'Assets/Utage/Editor/Scripts/Lib/Helper/MonoScriptHelper.cs'
+'Assets/Utage/Editor/Scripts/Lib/Helper/SerializeHelper.cs'
+'Assets/Utage/Editor/Scripts/Lib/PropertyDrawer/EnumFlagsDrawer.cs'
+'Assets/Utage/Editor/Scripts/Lib/PropertyDrawer/HideDrawer.cs'
+'Assets/Utage/Editor/Scripts/Lib/PropertyDrawer/LimitEnumDrawer.cs'
+'Assets/Utage/Editor/Scripts/Lib/PropertyDrawer/NotEditableDrawer.cs'
+'Assets/Utage/Editor/Scripts/Lib/PropertyDrawer/PathDialogDrawer.cs'
+'Assets/Utage/Editor/Scripts/Lib/Util/PostProcessEditorSceneChanged.cs'
+'Assets/Utage/Editor/Scripts/Lib/Window/CustomEditorWindow.cs'
+'Assets/Utage/Editor/Scripts/Lib/Window/OptimizedScrollView.cs'
+'Assets/Utage/Editor/Scripts/Lib/Window/TestCustomEditorWindow.cs'
+'Assets/Utage/Editor/Scripts/Menu/AboutUtage.cs'
+'Assets/Utage/Editor/Scripts/Menu/CreateAdvEngineWindow.cs'
+'Assets/Utage/Editor/Scripts/Menu/CreateManageresWindow.cs'
+'Assets/Utage/Editor/Scripts/Menu/CreateNewProjectWindow.cs'
+'Assets/Utage/Editor/Scripts/Menu/MeuTool.cs'
+'Assets/Utage/Editor/Scripts/Menu/MeuToolCreate.cs'
+'Assets/Utage/Editor/Scripts/Menu/MeuToolOpen.cs'
+'Assets/Utage/Editor/Scripts/Menu/MeuToolOutputFile.cs'
+'Assets/Utage/Editor/Scripts/Menu/ScenarioData/AdvExcelCsvConverter.cs'
+'Assets/Utage/Editor/Scripts/Menu/ScenarioData/AdvExcelImporter.cs'
+'Assets/Utage/Editor/Scripts/Menu/ScenarioData/AdvScenarioDataBuilderWindow.cs'
+'Assets/Utage/Editor/Scripts/Menu/ScenarioData/AdvScenarioDataProject.cs'
+'Assets/Utage/Editor/Scripts/Menu/ScriptCleanerWindow.cs'
+'Assets/Utage/Editor/Scripts/Menu/SelectableColorChanger.cs'
+'Assets/Utage/Editor/Scripts/Menu/Tool/AdvExcelLocalizeConverter.cs'
+'Assets/Utage/Editor/Scripts/Menu/Tool/AdvExcelLocalizeMerger.cs'
+'Assets/Utage/Editor/Scripts/Menu/Tool/ExportProjectPackage.cs'
+'Assets/Utage/Editor/Scripts/Menu/Tool/FontChanger.cs'
+'Assets/Utage/Editor/Scripts/Menu/Tool/ReferenceAssetChanger.cs'
+'Assets/Utage/Editor/Scripts/ResourceImporter/ResourceImporter.cs'
+'Assets/Yama_GUISystems/zYama_GUI_Resources/Editor/NestedAnimationCreator.cs'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/2.0/System.Runtime.Serialization.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/2.0/System.Xml.Linq.dll'

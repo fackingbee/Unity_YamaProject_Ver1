@@ -284,6 +284,7 @@ GameObject:
   - 92: {fileID: 599551067}
   - 124: {fileID: 599551066}
   - 81: {fileID: 599551065}
+  - 114: {fileID: 599551070}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -358,6 +359,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &599551070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 599551064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041087b69b3f41745bc587ef13ab89e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character01: {fileID: 145680, guid: 42d6a8e4c63cf2649bb13cf2b2e1ed15, type: 2}
 --- !u!1 &612543295
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,11 +512,11 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 720, y: 1280}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96

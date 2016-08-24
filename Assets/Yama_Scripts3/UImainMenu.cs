@@ -29,6 +29,8 @@ public class UImainMenu : MonoBehaviour {
 	
 	void Update () {
 
+		variableManage.levelUp ();
+
 		lvupNum.text = variableManage.currentLv.ToString ();
 
 		playerStatusText.text = "Player Lv : " + variableManage.currentLv  +

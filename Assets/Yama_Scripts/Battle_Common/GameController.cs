@@ -79,16 +79,14 @@ public class GameController : MonoBehaviour {
 		}
 
 		// デバッグ用（曲の途中まで飛ばす）
-		if(Input.GetKeyDown("s")){
-			TimeManager.time += 20.0f;
-			gameAudio.time   += 20.0f;
-		}
+//		if(Input.GetKeyDown("s")){
+//			TimeManager.time += 20.0f;
+//			gameAudio.time   += 20.0f;
+//		}
 
 
 		// デバッグ用（強制的にゲーム終了）
 		if(Input.GetKeyDown("z")){
-
-			//Debug.Log ("強制終了モード");
 
 			// 強制的に経験値を100加算
 			variableManage.currentExp += 100;
@@ -98,6 +96,8 @@ public class GameController : MonoBehaviour {
 
 			// 強制終了
 			GameStop ();
+
+			variableManage.levelUp ();
 
 			// データを保存するかどうか
 			bool svChk = KiiManage.saveKiiData ();
@@ -109,14 +109,10 @@ public class GameController : MonoBehaviour {
 
 			// データを保存してシーン移動
 			if(!svChk){
-
 				Debug.Log ("データを保存します");
-
 				svChk = KiiManage.saveKiiData ();
 			}
-
 			Invoke ("DebugBattleEnd",1f);
-
 		}
 
 
@@ -133,6 +129,8 @@ public class GameController : MonoBehaviour {
 			GameStop ();
 		}
 	}
+
+
 
 
 	public void GameStart(){

@@ -4,6 +4,7 @@ using JsonOrg;
 using KiiCorp.Cloud.Storage;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
+using System.Collections.Generic;
 
 public class KiiManage : MonoBehaviour {
 
@@ -138,17 +139,18 @@ public class KiiManage : MonoBehaviour {
 
 		Debug.Log ("userName : " + userName);
 		
-		KiiUser user;
+		//KiiUser user;
 
 		try {
 			
-			user = KiiUser.LogIn(userName,password);
+			//user = KiiUser.LogIn(userName,password);
+			KiiUser.LogIn(userName,password);
 			Debug.Log ( "Success user login : " + userName );
 
 		} catch ( System.Exception exception ) {
 			
 			Debug.LogError( "Failed user login : " + userName + " : " + exception );
-			user = null;
+			//user = null;
 			return false;
 		}
 
@@ -200,6 +202,8 @@ public class KiiManage : MonoBehaviour {
 		basicDataObj["open3"] = false;
 		basicDataObj["wp"]    = 0;
 
+
+
 		//オブジェクトを保存
 		try {
 			
@@ -239,6 +243,12 @@ public class KiiManage : MonoBehaviour {
 				variableManage.openMachine03 = (bool)obj["open3"];
 				variableManage.myWP          = (int )obj["wp"];
 
+				// nextExpを算出してvariableManageにセット
+				variableManage.nextExp = variableManage.currentLv * 100;
+
+
+
+
 			}
 
 		} catch (System.Exception e) {
@@ -268,6 +278,15 @@ public class KiiManage : MonoBehaviour {
 				obj["open2"] = variableManage.openMachine02;
 				obj["open3"] = variableManage.openMachine03;
 				obj["wp"]    = variableManage.myWP;
+
+				// Set a JSON array field
+				JsonArray jsonArray = new JsonArray();
+				JsonObject arrayElement1 = new JsonObject("{\"Name\": \"Alice\", \"age\": 30}");
+				jsonArray.Put(arrayElement1);
+				JsonObject arrayElement2 = new JsonObject("{\"Name\": \"Bob\", \"age\": 28}");
+				jsonArray.Put(arrayElement2);
+				obj["myArray"] = jsonArray;
+
 				obj.Save();
 
 			}

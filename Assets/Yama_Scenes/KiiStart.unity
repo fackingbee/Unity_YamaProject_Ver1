@@ -267,6 +267,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11428402, guid: 33fa417697f7c334ba17b2bd308d2447, type: 2}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11428402, guid: 33fa417697f7c334ba17b2bd308d2447, type: 2}
+      propertyPath: m_ReferenceResolution.x
+      value: 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 11428402, guid: 33fa417697f7c334ba17b2bd308d2447, type: 2}
+      propertyPath: m_ReferenceResolution.y
+      value: 1280
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fa417697f7c334ba17b2bd308d2447, type: 2}
   m_IsPrefabParent: 0
