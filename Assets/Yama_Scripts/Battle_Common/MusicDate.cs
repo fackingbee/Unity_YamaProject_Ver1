@@ -1,17 +1,16 @@
 ﻿ using UnityEngine;
 using System.Collections;
 
-// 単独で使うのでMonoBehaviorはいらない
 public class MusicDate  {
 
 	// 音楽譜面データを格納しておく構造体 //
 
 //	public float tick;
-	public long tick;		//Tick
-	public int  value;		//value(note_onなら音程でset_tempoならBPMを司る)
-	public bool isCreated;	//すでに譜面を生成したかどうかを判別するフラグ
-	public int  tapType;	//タップなのかフリックなどの特殊な操作なのか
-	public long nextTick;	//次のスコアのティック
+	public long tick;			//Tick
+	public int  value;			//value(note_onなら音程でset_tempoならBPMを司る)
+	public bool isCreated;		//すでに譜面を生成したかどうかを判別するフラグ
+	public int  tapType;		//タップなのかフリックなどの特殊な操作なのか
+	public long nextTick;		//次のスコアのティック
 
 	// コンストラクタ
 	public MusicDate(long tick, int value){
@@ -33,7 +32,7 @@ public class MusicDate  {
 			GameDate.totalScoreNum++;
 
 			// 集計をデバッグ
-			Debug.Log (GameDate.totalScoreNum);
+			//Debug.Log (GameDate.totalScoreNum);
 
 
 		} else if (value == 96 || value == 98 || value == 100 || value == 102) {
@@ -45,14 +44,13 @@ public class MusicDate  {
 			GameDate.totalScoreNum++;
 
 			// 集計をデバッグ
-			Debug.Log (GameDate.totalScoreNum);
+			//Debug.Log (GameDate.totalScoreNum);
 
 
 		} else if (value == 97 || value == 99 || value == 101 || value == 103) {
 			
 			// 4はロングタップ・アップ（同時に４レーンに出せるようにしておく）
 			this.tapType = 4;
-
 
 
 		} else if (value == 36) {
@@ -75,7 +73,7 @@ public class MusicDate  {
 			GameDate.totalScoreNum++;
 
 			// 集計をデバッグ
-			Debug.Log (GameDate.totalScoreNum);
+			//Debug.Log (GameDate.totalScoreNum);
 		
 
 		}

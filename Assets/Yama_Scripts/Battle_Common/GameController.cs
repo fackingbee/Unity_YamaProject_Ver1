@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-
 	// オーディオソース取得用
 	AudioSource gameAudio;
 
@@ -23,8 +22,6 @@ public class GameController : MonoBehaviour {
 	// 再生停止ボタン
 	GameObject pauseObj;
 	GameObject unPauseObj;
-
-	//private Animator cameraAnim;
 
 	private Animator cameraRotate;
 
@@ -69,12 +66,11 @@ public class GameController : MonoBehaviour {
 
 	void Update () {
 		
-		// ポーズ
 		if(!isPausing && Input.GetKeyDown("q")){
+		// ポーズ
 			Pause ();
-
-		// 再開
 		} else if (isPausing && Input.GetKeyDown("q")){
+		// 再開
 			UnPause ();
 		}
 
@@ -112,7 +108,9 @@ public class GameController : MonoBehaviour {
 				Debug.Log ("データを保存します");
 				svChk = KiiManage.saveKiiData ();
 			}
+
 			Invoke ("DebugBattleEnd",1f);
+
 		}
 
 
@@ -129,9 +127,7 @@ public class GameController : MonoBehaviour {
 			GameStop ();
 		}
 	}
-
-
-
+		
 
 	public void GameStart(){
 

@@ -3,8 +3,7 @@ using System.Collections;
 
 public class GameDate {
 
-	// どこからでも呼べるようにStaticで
-
+	// Static
 	public static long  score;					// ポイントスコア
 	public static float	GagePoint;				// ゲージポイント
 	public static float playerPowerGagePoint;	// playerPowerGageアニメーション用

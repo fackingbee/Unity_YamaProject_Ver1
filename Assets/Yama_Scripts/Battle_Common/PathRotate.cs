@@ -23,11 +23,8 @@ public class PathRotate : MonoBehaviour {
 	}
 		
 	void PathRotate1(){ pathRotate1.enabled = true; }
-
 	void PathRotate2(){ pathRotate2.enabled = true; }
-
 	void PathRotate3(){ pathRotate3.enabled = true; }
-
 	void PathRotate4(){ pathRotate4.enabled = true; }
 
 }
