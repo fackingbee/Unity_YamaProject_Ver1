@@ -406,39 +406,48 @@ public class ScoreHandler : MonoBehaviour {
 			// タップに成功したら、Perfect係数をPowerProgressにわたす。（係数が固定だと使いにくいので後に変数化）
 			powerProgress.PlayerValueChange(point * 0.03f);
 
+			// perfectするたびに１づつ加算
+			GameDate.perfectNum++;
+
+			// 加算された総数を見る
+			//Debug.Log ("perfectNum : " + GameDate.perfectNum);
+
 		// 以下同義
 		} else if (point > 0.4f) {
-			
-			pointObj.GetComponentInChildren<SpriteRenderer> ().sprite = textSprite [(int)PointTextKey.Great  ];
+			pointObj.GetComponentInChildren<SpriteRenderer> ().sprite = textSprite [(int)PointTextKey.Great];
 			powerProgress.PlayerValueChange(point * 0.03f);
-
+			GameDate.greatNum++;
+			//Debug.Log ("greattNum : " + GameDate.greattNum);
 		} else if (point > 0.2f) {
-
-			pointObj.GetComponentInChildren<SpriteRenderer> ().sprite = textSprite [(int)PointTextKey.Good   ];
+			pointObj.GetComponentInChildren<SpriteRenderer> ().sprite = textSprite [(int)PointTextKey.Good];
 			powerProgress.PlayerValueChange(point * 0.03f);
-
-		} else if (point > 0   ) {
-
-			pointObj.GetComponentInChildren<SpriteRenderer> ().sprite = textSprite [(int)PointTextKey.Bad    ];
+			GameDate.goodNum++;
+			//Debug.Log ("goodNum : " + GameDate.goodNum);
+		} else if (point > 0) {
+			pointObj.GetComponentInChildren<SpriteRenderer> ().sprite = textSprite [(int)PointTextKey.Bad];
 			powerProgress.PlayerValueChange(point * 0.03f);
-
+			GameDate.badNum++;
+			//Debug.Log ("badNum : " + GameDate.badNum);
 		// point＝0ならmissと表示させる
 		} else{
 			
-			pointObj.GetComponentInChildren<SpriteRenderer>().sprite  = textSprite [(int)PointTextKey.Miss   ];
+			pointObj.GetComponentInChildren<SpriteRenderer>().sprite  = textSprite [(int)PointTextKey.Miss];
 			powerProgress.PlayerValueChange(point * 0.03f);
 
 			// pointが0なのは、ゲーム中なのか、そうじゃないのか。ゲーム中以外はパラメーターの増減は加味しない。
 			powerProgress.isMissed = true;
 
+			GameDate.missNum++;
+			//Debug.Log ("missNum : " + GameDate.missNum);
+
 		}
 
 
-		// アニメーションを開始 //
+		// アニメーションを開始
 		pointObj.GetComponentInChildren<Animator>().Play( 0 );
 
 
-		// コンボカウント（ワークショップ6）
+		// コンボカウント
 		if (point > 0) {
 			ComboManager.combo++;
 		} else {
@@ -453,7 +462,6 @@ public class ScoreHandler : MonoBehaviour {
 			ComboManager.maxCombo = ComboManager.combo;
 			//Debug.Log (ComboManager.maxCombo);
 		}
-			
 
 		// コンボ表示（コンボを更新）
 		comboHandler.setCombo(ComboManager.combo);
@@ -541,7 +549,8 @@ public class ScoreHandler : MonoBehaviour {
 			// 削除
 			Destroy(gameObject);
 		}
-			
+
+		#region 移転しました
 		// 評価用テキスト表示（自動で削除時はshowTextに0を渡す/missを表示させる）
 		// メソッドを分けたので必要なくなる
 		//showText(0);
@@ -561,6 +570,8 @@ public class ScoreHandler : MonoBehaviour {
 
 		//// ゲージを表示
 		//gageHandler.setGage(GameDate.GagePoint);
+
+		#endregion
 
 	} // *******************************************************************************************************************		
 

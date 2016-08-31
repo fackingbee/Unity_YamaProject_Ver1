@@ -29,15 +29,31 @@ public class MusicDate  {
 			// 1はフリック
 			this.tapType = 1;
 
+			// ここまでの総スコアを集計
+			GameDate.totalScoreNum++;
+
+			// 集計をデバッグ
+			Debug.Log (GameDate.totalScoreNum);
+
+
 		} else if (value == 96 || value == 98 || value == 100 || value == 102) {
 			
 			// 3はロングタップ・ダウン（同時に４レーンに出せるようにしておく）
 			this.tapType = 3;
 
+			// ここまでの総スコアを集計
+			GameDate.totalScoreNum++;
+
+			// 集計をデバッグ
+			Debug.Log (GameDate.totalScoreNum);
+
+
 		} else if (value == 97 || value == 99 || value == 101 || value == 103) {
 			
 			// 4はロングタップ・アップ（同時に４レーンに出せるようにしておく）
 			this.tapType = 4;
+
+
 
 		} else if (value == 36) {
 
@@ -53,7 +69,14 @@ public class MusicDate  {
 		} else {
 			
 			// 2は通常のタップ
-			this.tapType = 2;	
+			this.tapType = 2;
+
+			// ここまでの総スコアを集計
+			GameDate.totalScoreNum++;
+
+			// 集計をデバッグ
+			Debug.Log (GameDate.totalScoreNum);
+		
 
 		}
 	}
