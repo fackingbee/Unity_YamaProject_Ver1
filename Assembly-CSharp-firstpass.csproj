@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{ACD4A56A-AA71-C59B-510E-CF2CECA84FAA}</ProjectGuid>
+    <ProjectGuid>{2535589E-DE36-49D8-4B3A-522224DE64F4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -103,6 +103,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
      <None Include="Assets\Cinema Suite\Cinema Director\Example Scenes\Shaders\Additive.shader" />
      <None Include="Assets\Cinema Suite\Cinema Director\ReadMe.txt" />
+     <None Include="Assets\codeandweb.com\Editor\SettingsTexturePackerImporter.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceRaytrace.cginc" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
@@ -193,6 +194,7 @@
      <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
      <None Include="Assets\Cinema Suite\Cinema Director\ChangeLog.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
+     <None Include="Assets\codeandweb.com\Readme.txt" />
      <None Include="Assets\Utage\Sample\ReadMe.txt" />
      <None Include="Assets\ResourceGlobes\RB_GlobeShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
@@ -205,13 +207,13 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="JsonOrg">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.11/Assets/Kii/Libs/JsonOrg.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.12/Assets/Kii/Libs/JsonOrg.dll</HintPath>
  </Reference>
  <Reference Include="KiiCloudStorageSDK">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.11/Assets/Kii/Libs/KiiCloudStorageSDK.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.12/Assets/Kii/Libs/KiiCloudStorageSDK.dll</HintPath>
  </Reference>
  <Reference Include="KiiCloudUnitySDK">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.11/Assets/Kii/Libs/KiiCloudUnitySDK.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.12/Assets/Kii/Libs/KiiCloudUnitySDK.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
