@@ -10,24 +10,23 @@ public class GageHandler : MonoBehaviour {
 	private float  increaseLvPoint;		// レベル差によるゲージ増減の補正(Perfect~Good)
 	private float  decreaseLvPoint;		// レベル差によるゲージ増減の補正(Miss)
 
-	private int kariPlayerLV;
-	private int kariEnemyLV;
-
+	private int    kariPlayerLV;
+	private int    kariEnemyLV;
 
 	void Start() {
-		
+
 		mySlider = GetComponent<Slider>();
 		mySlider.value = mySlider.maxValue / 2;
 
-		//Debug.Log ("mySlider.maxValue : " + mySlider.maxValue);
-		//Debug.Log ("mySlider.value : " + mySlider.value);
+		Debug.Log ("mySlider.maxValue : " + mySlider.maxValue);
+		Debug.Log ("mySlider.value : " + mySlider.value);
 
 		// まず味方と敵のレベルを暫定で設定する(Lv1~99の差の最大値は98)
-		kariPlayerLV = 1;
-		kariEnemyLV  = 1;
+		kariPlayerLV = 5;
+		kariEnemyLV  = 12;
 
 		//スコアの総数を取得する
-		//Debug.Log ("スコア総数 : " + GameDate.totalScoreNum);
+		Debug.Log ("スコア総数 : " + GameDate.totalScoreNum);
 
 		// スコア数に応じてPerfect増加量を決める
 		basePerfectPoint = (mySlider.value * 1.4f) / GameDate.totalScoreNum;
@@ -36,13 +35,12 @@ public class GageHandler : MonoBehaviour {
 		// レベル差をStart時に算出
 		increaseLvPoint = 1 + (kariPlayerLV - kariEnemyLV) * 0.01f;
 		decreaseLvPoint = 1 - (kariPlayerLV - kariEnemyLV) * 0.01f;
+
 		Debug.Log ("increaseLvPoint : " + increaseLvPoint);
 		Debug.Log ("decreaseLvPoint : " + decreaseLvPoint);
 
 	}
-
-
-
+		
 
 	// ゲージセット
 	public void setGage(string evaluation){
@@ -63,34 +61,40 @@ public class GageHandler : MonoBehaviour {
 			point = (0.5f * increaseLvPoint) * basePerfectPoint * 0.14f;
 			Debug.Log ("Bad : " + point);
 		}else if(evaluation.Equals("Miss")){
-			point = -(5.0f * decreaseLvPoint) * basePerfectPoint * 0.14f;
+			point = -(7.0f * decreaseLvPoint) * basePerfectPoint * 0.14f;
 			Debug.Log ("Miss : " + point);
 		}
-	
 
+		// 一旦GameDataへ格納する
+		GameDate.GagePoint += point;
+	
 		// アニメーション停止
 		StopCoroutine( "GageAnimation" );
 
 		// アニメーション開始
 		StartCoroutine(
 			GageAnimation(
-				point,
+				GameDate.GagePoint,
 				0.2f
 			)
 		);
-
 	}
+
 
 	// ゲージアニメーション
 	private IEnumerator GageAnimation(float point, float time){
 
-		float startTime  = TimeManager.time;		// アニメーション開始時間
-		float endTime    = startTime + time;		// アニメーション終了時間
-		float startValue = mySlider.value;			// アニメーション開始時のゲージ
-		float endValue   = mySlider.value + point;	// アニメーション終了時のゲージ
+		Debug.Log (point);
+
+		float startTime  = TimeManager.time;			// アニメーション開始時間
+		float endTime    = startTime + time;			// アニメーション終了時間
+		float startValue = mySlider.value;				// アニメーション開始時のゲージ
+		//float endValue   = mySlider.value + point;	// アニメーション終了時のゲージ
 
 		// 1フレームごとに数値を上昇させる
-		while (TimeManager.time < endTime || mySlider.value < endValue){
+		//while (TimeManager.time < endTime || mySlider.value < endValue){
+
+		while (TimeManager.time < endTime){
 
 			// アニメーション中の今の経過時間を計算
 			float t = (TimeManager.time - startTime) / time;
@@ -117,6 +121,10 @@ public class GageHandler : MonoBehaviour {
 				// 今度は「mySlider.value < 1000」なのでやはり進入を回避出来る。
 			}
 		} 
+
+		// コルーチンが終わったら初期化する
+		GameDate.GagePoint = 0;
+
 	}
 }
 
