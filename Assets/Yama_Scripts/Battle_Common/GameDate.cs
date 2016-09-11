@@ -15,6 +15,7 @@ public class GameDate {
 	public static int   badNum;					// bad総数
 	public static int   missNum;				// miss総数
 	public static int   totalScoreNum;			// 総スコア数格納変数
+	public static float setValue;				// ゲーム開始時のゲージ値
 
 	void Awake(){
 

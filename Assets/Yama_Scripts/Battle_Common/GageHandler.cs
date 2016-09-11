@@ -2,67 +2,69 @@
 using System.Collections;
 using UnityEngine.UI;
 
-
 public class GageHandler : MonoBehaviour {
 
 	private Slider mySlider;			// ゲージ増減変数
 	private float  basePerfectPoint;	// Perfect増加量
 	private float  increaseLvPoint;		// レベル差によるゲージ増減の補正(Perfect~Good)
 	private float  decreaseLvPoint;		// レベル差によるゲージ増減の補正(Miss)
-
-	private int    kariPlayerLV;
-	private int    kariEnemyLV;
+	private int    kariPlayerLV;		// 味方レベル
+	private int    kariEnemyLV;			// 敵レベル
+	private float  setGageValue;		// スタート時に算出したゲージ開始値を格納
 
 	void Start() {
 
-		mySlider = GetComponent<Slider>();
-		mySlider.value = mySlider.maxValue / 2;
+		setGageValue = GameDate.setValue;
+		//Debug.Log ("setGageValue : " + setGageValue);
 
-		Debug.Log ("mySlider.maxValue : " + mySlider.maxValue);
-		Debug.Log ("mySlider.value : " + mySlider.value);
+		mySlider = GetComponent<Slider>();
+		mySlider.value = setGageValue;
+		//mySlider.value = mySlider.maxValue / 2;
+
+		//Debug.Log ("mySlider.maxValue : " + mySlider.maxValue);
+		//Debug.Log ("mySlider.value : " + mySlider.value);
 
 		// まず味方と敵のレベルを暫定で設定する(Lv1~99の差の最大値は98)
-		kariPlayerLV = 5;
-		kariEnemyLV  = 12;
+		kariPlayerLV = 8;
+		kariEnemyLV  = 5;
 
 		//スコアの総数を取得する
-		Debug.Log ("スコア総数 : " + GameDate.totalScoreNum);
+		//Debug.Log ("スコア総数 : " + GameDate.totalScoreNum);
 
 		// スコア数に応じてPerfect増加量を決める
 		basePerfectPoint = (mySlider.value * 1.4f) / GameDate.totalScoreNum;
-		Debug.Log ("Perfect増加量 : " + basePerfectPoint);
+		//Debug.Log ("Perfect増加量 : " + basePerfectPoint);
 
 		// レベル差をStart時に算出
 		increaseLvPoint = 1 + (kariPlayerLV - kariEnemyLV) * 0.01f;
 		decreaseLvPoint = 1 - (kariPlayerLV - kariEnemyLV) * 0.01f;
-
-		Debug.Log ("increaseLvPoint : " + increaseLvPoint);
-		Debug.Log ("decreaseLvPoint : " + decreaseLvPoint);
+		//Debug.Log ("increaseLvPoint : " + increaseLvPoint);
+		//Debug.Log ("decreaseLvPoint : " + decreaseLvPoint);
 
 	}
 		
-
 	// ゲージセット
 	public void setGage(string evaluation){
 
 		float point = 0;
 	
 		// 開発段階テスト用
+		// 現状はMissが多いとなかなかSに到達出来ないようにしている
 		if (evaluation.Equals("Perfect")){
 			point = (5.0f * increaseLvPoint) * basePerfectPoint * 0.14f;
-			Debug.Log ("Perfect : " + point);
+			//Debug.Log ("Perfect : " + point);
 		}else if(evaluation.Equals("Great")){
 			point = (3.0f * increaseLvPoint) * basePerfectPoint * 0.14f;
-			Debug.Log ("Great : " + point);
+			//Debug.Log ("Great : " + point);
 		}else if(evaluation.Equals("Good")){
 			point = (1.5f * increaseLvPoint) * basePerfectPoint * 0.14f;
-			Debug.Log ("Good : " + point);
+			//Debug.Log ("Good : " + point);
 		}else if(evaluation.Equals("Bad")){
 			point = (0.5f * increaseLvPoint) * basePerfectPoint * 0.14f;
-			Debug.Log ("Bad : " + point);
+			//Debug.Log ("Bad : " + point);
 		}else if(evaluation.Equals("Miss")){
-			point = -(7.0f * decreaseLvPoint) * basePerfectPoint * 0.14f;
-			Debug.Log ("Miss : " + point);
+			point = -(10.0f * decreaseLvPoint) * basePerfectPoint * 0.15f;
+			//Debug.Log ("Miss : " + point);
 		}
 
 		// 一旦GameDataへ格納する
@@ -84,7 +86,7 @@ public class GageHandler : MonoBehaviour {
 	// ゲージアニメーション
 	private IEnumerator GageAnimation(float point, float time){
 
-		Debug.Log (point);
+		//Debug.Log (point);
 
 		float startTime  = TimeManager.time;			// アニメーション開始時間
 		float endTime    = startTime + time;			// アニメーション終了時間
@@ -121,10 +123,8 @@ public class GageHandler : MonoBehaviour {
 				// 今度は「mySlider.value < 1000」なのでやはり進入を回避出来る。
 			}
 		} 
-
 		// コルーチンが終わったら初期化する
 		GameDate.GagePoint = 0;
-
 	}
 }
 

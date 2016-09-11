@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7448DB03-650D-6A6E-D628-CA2E75B06DFA}</ProjectGuid>
+    <ProjectGuid>{C4A93F56-BB6F-B485-8689-A9A6FC7BC533}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -207,13 +207,13 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="JsonOrg">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.15/Assets/Kii/Libs/JsonOrg.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.16/Assets/Kii/Libs/JsonOrg.dll</HintPath>
  </Reference>
  <Reference Include="KiiCloudStorageSDK">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.15/Assets/Kii/Libs/KiiCloudStorageSDK.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.16/Assets/Kii/Libs/KiiCloudStorageSDK.dll</HintPath>
  </Reference>
  <Reference Include="KiiCloudUnitySDK">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.15/Assets/Kii/Libs/KiiCloudUnitySDK.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.16/Assets/Kii/Libs/KiiCloudUnitySDK.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
