@@ -1,9 +1,8 @@
 ﻿
 /// <summary>
 /// Box内が空でないと機能しないので、ラベルなどは独立して設置すること
+/// インスタンス化の際にタグをつける必要がある
 /// </summary>
-
-
 
 using UnityEngine;
 using System.Collections;
@@ -36,7 +35,6 @@ public class DraggableAdvance : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 	public Transform   CanvasTransform {get{return canvasTransform ?? (canvasTransform = GameObject.Find("Canvas").transform);}}
 
 
-
 	public void OnBeginDrag(PointerEventData eventData) {
 
 		// 実際の位置とドラッグ開始位置の差分を格納
@@ -44,6 +42,9 @@ public class DraggableAdvance : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
 		// Staticで同じスクリプトをアタッチしているが、タッチされたオブジェクトについてだけ処理する
 		dragObject = this;
+
+		//dragObjectはstaticなので、Drop側からも見れる
+		//Debug.Log ("現在ドラッグ中オブジェクトのTag : " + dragObject.tag);
 
 		// 左オベランドはBox[]、右オベランドはCanvasになるので、親のTransformをCanvasに差し替える
 		parentTransform = transform.parent;
@@ -66,9 +67,12 @@ public class DraggableAdvance : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 	}
 
 	public void OnDrag(PointerEventData eventData){
+		
 		transform.position = Input.mousePosition + tapRefPosition;
+
 		//Debug.Log ("transform.position :" + transform.position);
 		//Debug.Log ("Input.mousePosition :" + Input.mousePosition);
+
 	}
 
 	public void OnEndDrag(PointerEventData eventData){
@@ -77,6 +81,7 @@ public class DraggableAdvance : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 		//Debug.Log ("canvasTransform :" + canvasTransform);
 
 		if (transform.parent == canvasTransform) {
+
 			transform.SetParent(parentTransform);
 		}
 
@@ -92,6 +97,7 @@ public class DraggableAdvance : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
 
 	public void Update(){
+		
 		if (dragObject == null){
 			
 			// Updateが常に呼ばれているので重くない？

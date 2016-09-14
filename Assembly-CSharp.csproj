@@ -659,6 +659,7 @@
      <Compile Include="Assets\Yama_Scripts2\MovieImage.cs" />
      <Compile Include="Assets\Yama_Scripts2\OpeningToTopMenu.cs" />
      <Compile Include="Assets\Yama_Scripts2\RogoToOpening.cs" />
+     <Compile Include="Assets\Yama_Scripts2\SceneHandler.cs" />
      <Compile Include="Assets\Yama_Scripts2\StartToRogo.cs" />
      <Compile Include="Assets\Yama_Scripts2\ToGame.cs" />
      <Compile Include="Assets\Yama_Scripts3\KiiManage.cs" />
