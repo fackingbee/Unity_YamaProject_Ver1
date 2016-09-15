@@ -5532,7 +5532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileIOManager: {fileID: 0}
-  type: 0
+  type: 1
   isAutoSave: 1
   directoryName: Save1st_Peridot
   fileName: save
@@ -11208,19 +11208,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 638581fe720e14320a958498006d694b, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 638581fe720e14320a958498006d694b, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -9.999999
+      value: -55
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 638581fe720e14320a958498006d694b, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 380
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 638581fe720e14320a958498006d694b, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 638581fe720e14320a958498006d694b, type: 2}
       propertyPath: m_AnchorMin.x
@@ -11228,7 +11228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 638581fe720e14320a958498006d694b, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 638581fe720e14320a958498006d694b, type: 2}
       propertyPath: m_AnchorMax.x
@@ -11236,7 +11236,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 638581fe720e14320a958498006d694b, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 638581fe720e14320a958498006d694b, type: 2}
       propertyPath: m_Pivot.x
@@ -15710,7 +15710,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400004, guid: 9d114353a30ac4154999736bc822eb99, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1600
       objectReference: {fileID: 0}
     - target: {fileID: 22400004, guid: 9d114353a30ac4154999736bc822eb99, type: 2}
       propertyPath: m_AnchoredPosition.y
@@ -19323,7 +19323,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 64}
+  m_SizeDelta: {x: 3200, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1645988767
 MonoBehaviour:
