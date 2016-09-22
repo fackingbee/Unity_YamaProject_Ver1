@@ -64,6 +64,7 @@ public class ScoreHandler : MonoBehaviour {
 	// 生成されてから削除されるまでのTick
 	int tick = 79000;
 
+
 	// *******************************************************************************************************************
 	void Start () {
 
@@ -99,7 +100,7 @@ public class ScoreHandler : MonoBehaviour {
 	void Update() {
 
 		if (myRect.position.y <= touchBarRect.position.y && !isChecked && tapType != 3) {
-			
+
 			showText(0);
 
 			TouchResult (0);
@@ -235,8 +236,13 @@ public class ScoreHandler : MonoBehaviour {
 			// フリック開始から、規定フレーム数以内に、規定移動量を満たした場合、フリック成功
 			// フリックした方向とflickFlagの向きが一致した場合、フリック成功
 			if (flickFlag == flickDirection && flickCount <= 3 && flickDistance > 50.0f) {
-				TouchResult (distancePoint);	// TouchResultメソッドでDestroy
-				showText(distancePoint);		// showTextメソッドにdistancePointを引数として渡す
+				
+				// TouchResultメソッドでDestroy
+				TouchResult (distancePoint);
+
+				// showTextメソッドにdistancePointを引数として渡す
+				showText(distancePoint);
+
 				FlickAnim ();
 			}
 		}
@@ -261,7 +267,6 @@ public class ScoreHandler : MonoBehaviour {
 	}
 
 // *******************************************************************************************************************
-
 
 	// ロングタップ判定（Start）
 	public void OnScoreLongTapStart() {
@@ -315,8 +320,9 @@ public class ScoreHandler : MonoBehaviour {
 			}
 		}
 		return findObj;
-	} // *******************************************************************************************************************
+	} 
 
+// *******************************************************************************************************************
 
 	// ロングタップ判定（End）
 	public void OnScoreLongTapEnd() {
@@ -370,9 +376,6 @@ public class ScoreHandler : MonoBehaviour {
 		// PointTextプレハブ（エフェクトオブジェクトを生成
 		GameObject pointObj =Instantiate(pointText);
 
-//		// 初期化（念の為残しておく）
-//		pointObj.transform.position    = transform.position + new Vector3(0.6f, -5f, -10f);
-
 		//（修正）ScoreCreatorで生成されたxの位置を受け取って（touchBar）、タッチバーにプレハブを出現させる
 		pointObj.transform.position    = touchBar.transform.position + new Vector3(0.6f, 14f, -2.4f);
 		pointText.transform.localScale = new Vector3(6f, 6f, 6f);
@@ -394,44 +397,28 @@ public class ScoreHandler : MonoBehaviour {
 			// perfectするたびに１づつ加算
 			GameDate.perfectNum++;
 
-			// 加算された総数を見る
-			//Debug.Log ("perfectNum : " + GameDate.perfectNum);
-
 		// 以下同義
 		} else if (evaluation.Equals("Great")) {
 			pointObj.GetComponentInChildren<SpriteRenderer> ().sprite = textSprite [(int)PointTextKey.Great];
 			powerProgress.PlayerValueChange(distancePoint * 0.03f);
 			GameDate.greatNum++;
-			//Debug.Log ("greattNum : " + GameDate.greattNum);
-
 		} else if (evaluation.Equals("Good")) {
 			pointObj.GetComponentInChildren<SpriteRenderer> ().sprite = textSprite [(int)PointTextKey.Good];
 			powerProgress.PlayerValueChange(distancePoint * 0.03f);
 			GameDate.goodNum++;
-			//Debug.Log ("goodNum : " + GameDate.goodNum);
-
 		} else if (evaluation.Equals("Bad")) {
 			pointObj.GetComponentInChildren<SpriteRenderer> ().sprite = textSprite [(int)PointTextKey.Bad];
 			powerProgress.PlayerValueChange(distancePoint * 0.03f);
 			GameDate.badNum++;
-			//Debug.Log ("badNum : " + GameDate.badNum);
-
-		// point＝0ならmissと表示させる
-		} else {
-			
+		} else {	// point＝0ならmissと表示させる
 			pointObj.GetComponentInChildren<SpriteRenderer>().sprite  = textSprite [(int)PointTextKey.Miss];
-
 			powerProgress.PlayerValueChange(distancePoint * 0.03f);
 
 			// pointが0なのは、ゲーム中なのか、そうじゃないのか。ゲーム中以外はパラメーターの増減は加味しない。
 			powerProgress.isMissed = true;
 
 			GameDate.missNum++;
-			//Debug.Log ("missNum : " + GameDate.missNum);
-
-
 		}
-
 
 		// アニメーションを開始
 		pointObj.GetComponentInChildren<Animator>().Play( 0 );
@@ -450,14 +437,10 @@ public class ScoreHandler : MonoBehaviour {
 			
 			// maxComboをcomboで更新、つまりmissしたら0に戻る
 			ComboManager.maxCombo = ComboManager.combo;
-			//Debug.Log (ComboManager.maxCombo);
 		}
 
 		// コンボ表示（コンボを更新）
 		comboHandler.setCombo(ComboManager.combo);
-
-
-
 	} 
 
 // *******************************************************************************************************************
@@ -477,28 +460,33 @@ public class ScoreHandler : MonoBehaviour {
 					transform.position.y + -22.5f,
 					transform.position.z + -4.9f);
 
-				//（修正）ScoreCreatorで生成されたxの位置を受け取って（touchBar）、タッチバーにプレハブを出現させる
-				//touchObject.transform.position   = new Vector3(touchBar.transform.position.x ,
-				//											   touchBar.transform.position.y + -12f,
-				//											   touchBar.transform.position.z + -19f);
-
 				// BrokenEffectの大きさはtransform.positionとの兼ね合いもあって、破綻するかもしれないので、要検討!
 				touchObject.transform.localScale = new Vector3 (0.9f, 0.9f, 0.9f);
 
 				// アニメーションを開始
 				touchObject.GetComponent<Animator> ().Play (0);
 
+
 				// 譜面の削除
 				Destroy (gameObject);
 
 			} else {
+			
+				// isChecked = Trueの時はロングスコア時のMiss / isChecked = Falseの時はロングスコア以外のMiss
+				if (isChecked) {
+				
+					Destroy (gameObject);
 
+				} else {	
+				
+					// ロングタップ以外のMiss時は画面外でDestroyする為に遅らせる
+					Destroy (gameObject,0.3f);
+
+				}
 				// 譜面の削除
-				Destroy (gameObject);
-
+				//Destroy (gameObject);
 			}
-
-
+			
 		// GameDataのscoreにポイントを設定 （pointの基準値が変わったのでその分を*4.4f乗算）
 		GameDate.score += (int)(distancePoint * 1000 * 4.4f);
 
@@ -508,7 +496,6 @@ public class ScoreHandler : MonoBehaviour {
 		string evaluation = CreateEvaluation (distancePoint);
 
 		gageHandler.setGage (evaluation);
-
 
 //		// GamaDateのGagePointを設定 （pointの基準値が変わったのでその分を*4.4f乗算）
 //		GameDate.GagePoint += distancePoint * 1.1f * 4.4f;
@@ -540,9 +527,7 @@ public class ScoreHandler : MonoBehaviour {
 		if (distancePoint < 0){
 			distancePoint = 0;
 		}
-
 		return distancePoint;
-
 	} 
 
 // *******************************************************************************************************************
@@ -567,7 +552,6 @@ public class ScoreHandler : MonoBehaviour {
 	}
 
 // *******************************************************************************************************************
-
 
 	// 自動で削除（miss時の処理）
 	public void AutoDestroy(){
@@ -599,16 +583,13 @@ public class ScoreHandler : MonoBehaviour {
 		//gageHandler.setGage(GameDate.GagePoint);
 
 		#endregion
-
 	} 
 // *******************************************************************************************************************		
-
 
 	//タッチした瞬間レンズフレア発生
 	public void TouchEffect() {
 		buttonAnim.SetTrigger ("Touch"); 
 	}
-
 
 	// ロングタップアニメーションを止めるメソッド(EventTriggerでUp時に実行される)
 	public void LongTapAnimStop() {

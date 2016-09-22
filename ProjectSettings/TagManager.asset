@@ -30,6 +30,11 @@ TagManager:
   - Equipment
   - Item
   - Support
+  - Perfect
+  - Great
+  - Good
+  - Cool
+  - Miss
   layers:
   - Default
   - TransparentFX

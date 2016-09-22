@@ -318,6 +318,6 @@ public class ScoreCreator : MonoBehaviour {
 				break;
 
 			}
-		} // foreach end
-	} // Update end
+		}
+	}
 }

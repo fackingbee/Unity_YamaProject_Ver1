@@ -28,7 +28,7 @@ public class UtageShake : MonoBehaviour {
 		// 再生後は基本bgが存在するので、一度しか進入しない
 		if ( bg==null ){
 			
-			Debug.Log ("最初に背景を取得する");
+			//Debug.Log ("最初に背景を取得する");
 
 			bg = GameObject.Find("Bg Default");
 		}
@@ -40,7 +40,7 @@ public class UtageShake : MonoBehaviour {
 		// "DamageEffect"がTrueならif内に入り、エフェクト実行
 		if((bool)engine.Param.GetParameter ("Shake")){
 
-			Debug.Log ("ShakeはTrueです");
+			//Debug.Log ("ShakeはTrueです");
 
 			// iTweenで揺らす
 			iTween.ShakePosition (gameObject, iTween.Hash(
