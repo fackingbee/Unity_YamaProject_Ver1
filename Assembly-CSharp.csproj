@@ -631,6 +631,7 @@
      <Compile Include="Assets\Yama_Prefabs_Effects\Scripts\ParticleSize.cs" />
      <Compile Include="Assets\Yama_Scripts\Battle_Common\AudioManager.cs" />
      <Compile Include="Assets\Yama_Scripts\Battle_Common\AutoDestroy.cs" />
+     <Compile Include="Assets\Yama_Scripts\Battle_Common\AutoDestroy02.cs" />
      <Compile Include="Assets\Yama_Scripts\Battle_Common\BoardMove.cs" />
      <Compile Include="Assets\Yama_Scripts\Battle_Common\ComboHandler.cs" />
      <Compile Include="Assets\Yama_Scripts\Battle_Common\ComboManager.cs" />

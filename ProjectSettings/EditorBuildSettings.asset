@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/Yama_Scenes/GUISystem.unity
   - enabled: 1
     path: Assets/Yama_Scenes/Battle.unity
+  - enabled: 1
+    path: Assets/1st_Peridot/1st_Peridot.unity

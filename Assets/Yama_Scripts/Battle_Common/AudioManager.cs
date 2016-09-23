@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement; 
+
 
 public class AudioManager : MonoBehaviour {
 	
@@ -78,6 +80,9 @@ public class AudioManager : MonoBehaviour {
 				// それ以外はゲームオーバーでGameOverアニメーションを表示
 				GameOver.SetActive(true);
 
+				// 仮でゲームが終了したらHomeへシーン移動（後で削除する）
+				Invoke ("HomeScene", 5.0f);
+
 			}
 
 			// 自身を停止してループを防ぐ / Updateに記載しているので、終了してもゲーム（フレーム）が進むごとに上記が実行されてしまう 。
@@ -86,4 +91,10 @@ public class AudioManager : MonoBehaviour {
 
 		}
 	}
+
+	// 仮でゲームが終了したらHomeへシーン移動（後で削除する）
+	public void HomeScene(){
+		SceneManager.LoadScene ("GUISystem");
+	}
+		
 }

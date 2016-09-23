@@ -30,11 +30,17 @@ public class EvaluationHandler : MonoBehaviour {
 	}
 		
 	// カウント宣言
-	private int currentPerfect;		//現在のPerfect数
-	private int currentGreat;		//現在のGreat数
-	private int currentGood;		//現在のGood数
-	private int currentCool;		//現在のCool数
-	private int currentMiss;		//現在のMiss数
+	private int currentPerfect;			//現在のPerfect数
+	private int currentGreat;			//現在のGreat数
+	private int currentGood;			//現在のGood数
+	private int currentCool;			//現在のCool数
+	private int currentMiss;			//現在のMiss数
+
+	public GameObject perfectEffect;
+	public GameObject greatEffect;
+	public GameObject goodEffect;
+	public GameObject coolEffect;
+	public GameObject missEffect;
 
 	// Use this for initialization
 	void Start () {
@@ -62,6 +68,7 @@ public class EvaluationHandler : MonoBehaviour {
 			if(gameObject.tag == "Perfect"){
 				currentPerfect  = GameDate.perfectNum;
 				CachedText.text = currentPerfect.ToString();
+				Instantiate (perfectEffect);
 			}
 		}
 
@@ -69,6 +76,7 @@ public class EvaluationHandler : MonoBehaviour {
 			if(gameObject.tag == "Great"){
 				currentGreat  = GameDate.greatNum;
 				CachedText.text = currentGreat.ToString();
+				Instantiate (greatEffect);
 			}
 		}
 
@@ -76,6 +84,7 @@ public class EvaluationHandler : MonoBehaviour {
 			if(gameObject.tag == "Good"){
 				currentGood = GameDate.goodNum;
 				CachedText.text = currentGood.ToString();
+				Instantiate (goodEffect);
 			}
 		}
 
@@ -83,6 +92,7 @@ public class EvaluationHandler : MonoBehaviour {
 			if(gameObject.tag == "Cool"){
 				currentCool = GameDate.badNum;
 				CachedText.text = currentCool.ToString();
+				Instantiate (coolEffect);
 			}
 		}
 
@@ -90,10 +100,8 @@ public class EvaluationHandler : MonoBehaviour {
 			if(gameObject.tag == "Miss"){
 				currentMiss = GameDate.missNum;
 				CachedText.text = currentMiss.ToString();
+				Instantiate (missEffect);
 			}
 		}
-
-
-
 	}
 }
