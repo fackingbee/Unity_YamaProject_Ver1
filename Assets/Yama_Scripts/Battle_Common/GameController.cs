@@ -100,7 +100,6 @@ public class GameController : MonoBehaviour {
 
 			Debug.Log ("variableManage.currentExp : " + variableManage.currentExp);
 			Debug.Log ("variableManage.nextExp : " + variableManage.nextExp);
-
 			Debug.Log ("svChk : " + svChk);
 
 			// データを保存してシーン移動

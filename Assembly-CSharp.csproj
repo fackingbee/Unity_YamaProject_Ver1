@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D0C0BA45-8E15-A442-7A4D-6BA57CC1C111}</ProjectGuid>
+    <ProjectGuid>{7CE2A573-0BC8-4A3D-7482-FE47E3A7B608}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -794,18 +794,18 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="JsonOrg">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.20/Assets/Kii/Libs/JsonOrg.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.24/Assets/Kii/Libs/JsonOrg.dll</HintPath>
  </Reference>
  <Reference Include="KiiCloudStorageSDK">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.20/Assets/Kii/Libs/KiiCloudStorageSDK.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.24/Assets/Kii/Libs/KiiCloudStorageSDK.dll</HintPath>
  </Reference>
  <Reference Include="KiiCloudUnitySDK">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.20/Assets/Kii/Libs/KiiCloudUnitySDK.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.24/Assets/Kii/Libs/KiiCloudUnitySDK.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{F26048D0-90B1-0157-6618-97482D50774E}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{0340C7E9-CF51-6933-B095-DE84240E27D7}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

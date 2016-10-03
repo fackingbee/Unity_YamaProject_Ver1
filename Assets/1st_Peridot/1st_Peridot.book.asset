@@ -846,7 +846,7 @@ MonoBehaviour:
       isCommentOut: 1
     - rowIndex: 6
       strings:
-      - Jump
+      - //Jump
       - '*Chapter3'
       - 
       - 
@@ -855,7 +855,7 @@ MonoBehaviour:
       - 
       - 
       isEmpty: 0
-      isCommentOut: 0
+      isCommentOut: 1
     - rowIndex: 7
       strings:
       - //
@@ -2648,7 +2648,7 @@ MonoBehaviour:
       isCommentOut: 1
     name: Assets/1st_Peridot/1st_Peridot.xls:Start
     type: 1
-    textLength: 3232
+    textLength: 3234
     headerRow: 0
   - rows:
     - rowIndex: 0

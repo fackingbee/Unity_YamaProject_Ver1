@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B5C9D8C4-21C7-5AD8-B36C-0A60C80478DB}</ProjectGuid>
+    <ProjectGuid>{5CB3630B-4E39-52C0-4211-AC090171B592}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -318,37 +318,37 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
  <Reference Include="DirectorEditor">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.20/Assets/Cinema Suite/Cinema Director/System/Editor/DirectorControl/DirectorEditor.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.24/Assets/Cinema Suite/Cinema Director/System/Editor/DirectorControl/DirectorEditor.dll</HintPath>
  </Reference>
  <Reference Include="TexturePackerImporter">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.20/Assets/codeandweb.com/Editor/TexturePackerImporter.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.24/Assets/codeandweb.com/Editor/TexturePackerImporter.dll</HintPath>
  </Reference>
  <Reference Include="JMOAssets">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.20/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.24/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
  </Reference>
  <Reference Include="JsonOrg">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.20/Assets/Kii/Libs/JsonOrg.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.24/Assets/Kii/Libs/JsonOrg.dll</HintPath>
  </Reference>
  <Reference Include="KiiCloudStorageSDK">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.20/Assets/Kii/Libs/KiiCloudStorageSDK.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.24/Assets/Kii/Libs/KiiCloudStorageSDK.dll</HintPath>
  </Reference>
  <Reference Include="KiiCloudUnitySDK">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.20/Assets/Kii/Libs/KiiCloudUnitySDK.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.24/Assets/Kii/Libs/KiiCloudUnitySDK.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.20/Assets/Utage/Editor/NPOI/dotnet2/ICSharpCode.SharpZipLib.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.24/Assets/Utage/Editor/NPOI/dotnet2/ICSharpCode.SharpZipLib.dll</HintPath>
  </Reference>
  <Reference Include="NPOI">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.20/Assets/Utage/Editor/NPOI/dotnet2/NPOI.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.24/Assets/Utage/Editor/NPOI/dotnet2/NPOI.dll</HintPath>
  </Reference>
  <Reference Include="NPOI.OOXML">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.20/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OOXML.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.24/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OOXML.dll</HintPath>
  </Reference>
  <Reference Include="NPOI.OpenXml4Net">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.20/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OpenXml4Net.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.24/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OpenXml4Net.dll</HintPath>
  </Reference>
  <Reference Include="NPOI.OpenXmlFormats">
- <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.20/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OpenXmlFormats.dll</HintPath>
+ <HintPath>/Users/yamamotoshouzou/Desktop/Unity_YamaProject_Ver1.0.24/Assets/Utage/Editor/NPOI/dotnet2/NPOI.OpenXmlFormats.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -377,11 +377,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{F26048D0-90B1-0157-6618-97482D50774E}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{0340C7E9-CF51-6933-B095-DE84240E27D7}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{D0C0BA45-8E15-A442-7A4D-6BA57CC1C111}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{7CE2A573-0BC8-4A3D-7482-FE47E3A7B608}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript.unityproj">
-      <Project>{E6854F1B-0DD7-11DF-0A78-166090AAB303}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
+      <Project>{C48DA1D7-DDFF-A7E9-7453-53C6CE2912DD}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

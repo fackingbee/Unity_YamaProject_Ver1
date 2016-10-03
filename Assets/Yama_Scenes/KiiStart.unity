@@ -93,8 +93,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 191374453}
-  - 114: {fileID: 191374452}
   - 114: {fileID: 191374454}
+  - 114: {fileID: 191374452}
   m_Layer: 0
   m_Name: KiiInit
   m_TagString: Untagged

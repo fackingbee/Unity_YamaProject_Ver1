@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Yama_Scenes/GUISystem.unity
+- path: Assets/1st_Peridot/1st_Peridot.unity
   isLoaded: 1
   isActive: 1
